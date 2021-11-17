@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{42:function(n,t,e){"use strict";e.r(t),e.d(t,"default",(function(){return u}));var o=e(1);const c=Object(o.j)("<p>PORTFOLIO</p>",2);function u(n){let{}=n;return c.cloneNode(!0)}}}]);
