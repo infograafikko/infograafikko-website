@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import { lazy } from "solid-js";
+import { useRoutes, Link } from "solid-app-router";
+
+import Header from "./Pages/Universal/Header";
+
+import { styled } from "solid-styled-components";
+
+
+const pages = [
+  {
+    path: "/",
+    component: lazy(() => import("./Pages/Home/Home")),
+    menuText: "",
+    placement: "logo"
+  },
+  {
+    path: "/portfolio",
+    component: lazy(() => import("./Pages/Portfolio/Portfolio")),
+    menuText: "Portfolio",
+    placement: "menuItem"
+  },
+  {
+    path: "/ota-yhteytta",
+    component: lazy(() => import("./Pages/ContactMe/ContactMe")),
+    menuText: "Ota yhtettä",
+    placement: "menuItem"
+  },
+  {
+    path: "/*all",
+    component: lazy(() => import("./Pages/notFound")),
+    menuText: "",
+    placement: null
+  }
+];
 
 function App() {
+
+  const Routes = useRoutes(pages);
+
+
   return (
-    <div class="App">
-      <header class="App-header">
-        <img src={logo} class="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          class="App-link"
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header 
+        pages={pages}
+      />
+      <Routes />
+    </Container>
   );
 }
 
+
 export default App;
+
+const Container = styled("div")(
+  props => `
+  overflow-x: hidden;
+  
+`
+);
