@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "47ad8981307216dcde090ffa8177fa6d",
+    "revision": "4dd663378572c0de9b43bf654faf4687",
     "url": "/infograafikko-website/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/infograafikko-website/static/css/main.7759d913.chunk.css"
   },
   {
-    "revision": "fb16642c538b57f94572",
-    "url": "/infograafikko-website/static/js/2.e4f41a87.chunk.js"
+    "revision": "025489fdf25729ddaa80",
+    "url": "/infograafikko-website/static/js/2.47b553f8.chunk.js"
   },
   {
     "revision": "4ae450f4890622d031c0",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/infograafikko-website/static/js/main.54bb850d.chunk.js"
   },
   {
-    "revision": "fbe0ad3242de76d48007",
-    "url": "/infograafikko-website/static/js/runtime~main.fde3765d.js"
+    "revision": "e9ab0a18207c8cc3ad16",
+    "url": "/infograafikko-website/static/js/runtime~main.25454aff.js"
   },
   {
     "revision": "83d12a89da21639ffb079b6b3f3bb253",
