@@ -1,43 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4dd663378572c0de9b43bf654faf4687",
+    "revision": "b1fb390758f321e5f9a5584152923f6a",
     "url": "/infograafikko-website/index.html"
   },
   {
-    "revision": "f95a8e2c586533135531",
+    "revision": "9a9df0dacde73efd147f",
     "url": "/infograafikko-website/static/css/main.7759d913.chunk.css"
   },
   {
-    "revision": "025489fdf25729ddaa80",
-    "url": "/infograafikko-website/static/js/2.47b553f8.chunk.js"
+    "revision": "5ea307d9f1f268abf4c9",
+    "url": "/infograafikko-website/static/js/2.b762bc31.chunk.js"
   },
   {
-    "revision": "4ae450f4890622d031c0",
-    "url": "/infograafikko-website/static/js/3.c908a448.chunk.js"
+    "revision": "25718b115f124a4d2db2",
+    "url": "/infograafikko-website/static/js/3.1893e79c.chunk.js"
   },
   {
     "revision": "be5ba71219043c6821af",
     "url": "/infograafikko-website/static/js/4.48868506.chunk.js"
   },
   {
-    "revision": "e0266817e07953ab23c1",
-    "url": "/infograafikko-website/static/js/5.f6df2b93.chunk.js"
+    "revision": "1ada02102b75a9fd548a",
+    "url": "/infograafikko-website/static/js/5.b19238ee.chunk.js"
   },
   {
-    "revision": "c315a78981c4080f50e4",
-    "url": "/infograafikko-website/static/js/6.6c2743af.chunk.js"
+    "revision": "af298524447cb3b0a734",
+    "url": "/infograafikko-website/static/js/6.858c8a19.chunk.js"
   },
   {
     "revision": "a400ee8e11b08cf72953",
     "url": "/infograafikko-website/static/js/7.cd7df4bf.chunk.js"
   },
   {
-    "revision": "f95a8e2c586533135531",
-    "url": "/infograafikko-website/static/js/main.54bb850d.chunk.js"
+    "revision": "9a9df0dacde73efd147f",
+    "url": "/infograafikko-website/static/js/main.7fda7744.chunk.js"
   },
   {
-    "revision": "e9ab0a18207c8cc3ad16",
-    "url": "/infograafikko-website/static/js/runtime~main.25454aff.js"
+    "revision": "d47c0a465acff2a2c46d",
+    "url": "/infograafikko-website/static/js/runtime~main.09340a0b.js"
   },
   {
     "revision": "83d12a89da21639ffb079b6b3f3bb253",
@@ -122,6 +122,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "29e34cc005ae6683f67852ba7424569e",
     "url": "/infograafikko-website/static/media/markkinointimix.29e34cc0.png"
+  },
+  {
+    "revision": "6bab73703ff747ca83de690aa4f020f3",
+    "url": "/infograafikko-website/static/media/neuro-research-infographics.6bab7370.png"
   },
   {
     "revision": "89ccb09060a7adf788ea2340c54d6d78",
