@@ -29,9 +29,19 @@ export default function Interested({title,text}) {
                     </ButtonsContainer>
                 </ContentLeft>
                 <ContentRight
-                    bgImg={"https://main.dxa7363xhsxq9.amplifyapp.com/static/media/joel-kanerva3.bc0eaa3a.jpg"}
-                >
-                    <BgImg src={MeImage} />
+                    bgImg={MeImage}
+
+                >   
+                    <div style={{
+                        "background-image": `url(${MeImage})`,
+                        "background-size": "cover",
+                        "background-position": "center",
+                        "width": "100%",
+                        "max-width": "1000px",
+                        "min-height": "300px"
+                    }}
+                    />
+                    {/*<BgImg src={MeImage} />*/}
                     </ContentRight>
             </Content>
         </Container>
@@ -109,6 +119,7 @@ const BgImg = styled("div")(
     flex-direction: row;
     position: relative;
     margin: auto;
+    display: block;
     background-image: url(${props.src});
     background-size: cover;
     background-position: center;
