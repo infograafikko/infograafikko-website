@@ -7,7 +7,7 @@ export default function Logo({
     opacity=0.7
 }){
     return(
-    <svg height="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 172 42" xmlSpace="preserve">
+    <svg style={{width: "auto"}} height="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 172 42" xmlSpace="preserve">
         <g>
         	<path fill={color} d="M74.5,31.9v-7.1H76v7.4c0,0.6-0.1,1.1-0.4,1.4c-0.3,0.3-0.8,0.6-1.6,0.8l-0.6-1.1c0.5-0.2,0.8-0.3,0.9-0.5
         		C74.4,32.6,74.5,32.4,74.5,31.9z"/>
@@ -66,6 +66,7 @@ const LogoSVG = styled("svg")(
     height: ${props.height};
     margin: ${props.margin};
     cursor: ${props.linkToMainPage ? "pointer" : "default"};
+	width: ${props.width};
 
     @media only screen and (max-width: ${sizes.s}) {
         height: ${props.heightM};
