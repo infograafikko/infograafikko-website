@@ -29,7 +29,7 @@ export default function Interested({title,text}) {
                     </ButtonsContainer>
                 </ContentLeft>
                 <ContentRight
-                    bgImg={MeImage}
+                    bgImg={"https://main.dxa7363xhsxq9.amplifyapp.com/static/media/joel-kanerva3.bc0eaa3a.jpg"}
                 >
                     <BgImg src={MeImage} />
                     </ContentRight>
