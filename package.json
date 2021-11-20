@@ -1,6 +1,4 @@
 {
-  "homepage": "http://infograafikko.github.io/infograafikko-website",
-  "name": "infograafikko-website",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
