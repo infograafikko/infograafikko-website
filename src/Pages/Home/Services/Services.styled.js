@@ -1,4 +1,4 @@
-import { styled } from "solid-styled-components";
+import { styled, keyframes } from "solid-styled-components";
 import { sizes } from "../../../lib/screenSizes";
 
 
@@ -199,5 +199,14 @@ export const ImageStack = styled("div")(
       clip-path: inset(${props.insetMobile} round ${props.insetRoundMobile});
       top: ${props.topMobile};
     }
+  `
+  );
+
+
+  export const AnimateContainer = styled("div")(
+    props => `
+      height: 100%;
+      width: auto;
+    
   `
   );

@@ -1,4 +1,4 @@
-import { styled } from "solid-styled-components";
+import { styled, keyframes } from "solid-styled-components";
 import { sizes } from "../../../lib/screenSizes";
 
 export const LeadContent = styled("div")(
@@ -113,23 +113,27 @@ export const ClippedImage = styled("img")(
 );
 
 //clip-path: inset(2% 4% 24% 4% round 3vh);
-
+const animateToPosition = (leftOriginal, leftEnd) => keyframes` 
+    0% { left: ${leftOriginal}; }
+    100% { left: ${leftEnd}; }
+`
 
 export const LeadImage = styled("img")(
     props => `
     position: absolute;
     height: ${props.height};
-    left: ${props.left};
+    left: ${props.leftOriginal};
     top: ${props.top};
+    animation: ${props.animate && animateToPosition(props.leftOriginal, props.left)} 1s forwards ease;
 
     @media only screen and (max-width: ${sizes.m}) {
         height: ${props.heightM};
-        left: ${props.leftM};
+        left: ${props.leftOriginal};
     }
 
     @media only screen and (max-width: ${sizes.s}) {
         height: ${props.heightS};
-        left: ${props.leftS};
+        left: ${props.leftOriginal};
     }
   `
 );

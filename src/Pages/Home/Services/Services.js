@@ -47,9 +47,7 @@ const RenderServicePics = ({ServicePics}) => {
                                 topMobile={"0px"}
                                 left={"0"}
                             >
-                                <Professoriliitto 
-                                    animate={imgPosInViewport() < 0.5}
-                                />
+                                <Professoriliitto />
                             </s.ClippedImageNew>
                             <s.EmbedImage 
                                 height={pic.height}
@@ -58,10 +56,12 @@ const RenderServicePics = ({ServicePics}) => {
                                 alt={"Infografiikka-viesti Instagramissa."}
                             />
                         </> :
-                        <>
+                        <s.AnimateContainer
+                            className="animateLaptop"
+                        >
                             <s.NonClippedImage 
                                 src={pic.background} 
-                                alt={"Puhelin upotettuna taittoon - päällä näkyy instagram-upotus"}
+                                alt={"Kannettava tietokone upotettuna aittoon - päällä näkyy Powerpoint-infografiikka"}t
                             />
                             <s.ClippedImageNew
                                 top={"10%"}
@@ -75,7 +75,7 @@ const RenderServicePics = ({ServicePics}) => {
                                     heightS={"23.5vh"}
                                 />
                             </s.ClippedImageNew>
-                        </>
+                        </s.AnimateContainer>
                         }
                     </s.ImageStack>
                     :

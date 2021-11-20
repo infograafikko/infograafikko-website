@@ -30,7 +30,7 @@ export default function Lead({
     ref
 }) {
 
-    const [scrollPos, setScrollPos] = createSignal(0)
+    const [scrollPos, setScrollPos] = createSignal(-20)
     calcScrollPosition(setScrollPos)
 
 
@@ -44,6 +44,7 @@ export default function Lead({
             </s.LeadTexts>
             <s.LeadImages height="70vh">
                 <s.LeadImage 
+                    leftOriginal="100vw"
                     left="10vw" 
                     leftM="10vw"
                     leftS="10vw"
@@ -52,6 +53,7 @@ export default function Lead({
                     heightM="50vh" 
                     heighS="50vh" 
                     src={leadLaptop} 
+                    animate={scrollPos() !== -20}
                     alt={"Infografikka esittää, miten kiviaines kiertää työmaalla"}
 
                 />
