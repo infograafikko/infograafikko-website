@@ -8,12 +8,15 @@ export const Title = styled("h2")(
     font-weight: 700;
     font-size: 32px;
     margin: 0px;
+    margin-bottom: ${props.marginBottom};
     line-height: 1.25;
   `
 );
 
 export const Paragraph = styled("p")(
   props => `
-  
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 6px 0;
 `
 );

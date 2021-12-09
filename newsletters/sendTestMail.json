@@ -1,0 +1,22 @@
+{
+    "ConfigurationSetName": "newsletterSubscription",
+    "Content": {
+        "Simple": {
+            "Body": {
+                "Text": { 
+                    "Charset": "UTF-8",
+                    "Data": "Hello"
+                 }
+            },
+            "Subject": {
+                "Charset": "UTF-8",
+                "Data": "string"
+            }
+        }
+    },
+    "FromEmailAddress":"Infograafikko <joel@infograafikko.fi>",
+    "Destination": {
+      "ToAddresses": [ "joel.kanerva@gmail.com"
+      ]
+    }
+  }

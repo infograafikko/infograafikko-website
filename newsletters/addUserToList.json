@@ -1,0 +1,12 @@
+{
+    "ContactListName": "Infograafikko",
+    "EmailAddress": "foo@fi.fi",
+    "AttributesData": "{\"FirstName\": \"Foo\", \"LastName\": \"Fii\"}",
+    "TopicPreferences": [
+        {
+            "TopicName": "Infograafikko_Newsletter",
+            "SubscriptionStatus": "OPT_IN"
+        }
+    ],
+    "UnsubscribeAll": false
+}

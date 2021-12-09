@@ -1,7 +1,7 @@
 import { styled } from "solid-styled-components";
 import * as ss from '../../Universal/Universal.styled';
 
-import Form from "./Form/FormMailChimp";
+import Form from "./Form/FormLambda";
 
 import { sizes } from "../../../lib/screenSizes";
 
@@ -12,7 +12,7 @@ export default function Newsletter({title,paragraph,paragraph2}) {
     return (
         <Container>
             <TextContainer>
-                <ss.Title color={"black"}>{title}</ss.Title>
+                <ss.Title marginBottom="16px" color={"black"}>{title}</ss.Title>
                 <ss.Paragraph><strong>{paragraph}</strong></ss.Paragraph>
                 <ss.Paragraph>{paragraph2}</ss.Paragraph>
                 <Form />

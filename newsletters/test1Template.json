@@ -1,0 +1,8 @@
+{
+    "TemplateName": "Test",  
+    "TemplateContent": {
+        "Subject": "Hei, {{firstName}}!",
+        "Html": "<h1>Hello {{firstName}},</h1><p>Your favorite flower is {{lastName}}.</p>",
+        "Text": "Dear {{firstName}},\r\nYour favorite flowerino is {{lastName}}."
+    }
+}

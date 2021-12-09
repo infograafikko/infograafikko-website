@@ -1,0 +1,14 @@
+{
+    "ConfigurationSetName": "newsletterSubscription",
+    "Content": {
+        "Template": {
+            "TemplateName": "InfograafikkoOpas",
+            "TemplateData": "{ \"FirstName\":\"Joel\", \"LastName\": \"Kanerva\", \"amazonSESUnsubscribeUrl\": \"https://www.infograafikko.fi/\" }"
+        }
+    },
+    "FromEmailAddress":"Infograafikko <joel@infograafikko.fi>",
+    "Destination": {
+      "ToAddresses": [ "joel.kanerva@gmail.com"
+      ]
+    }
+  }

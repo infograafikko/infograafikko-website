@@ -1,7 +1,5 @@
-import { styled } from "solid-styled-components";
-import { sizes } from "../../../lib/screenSizes";
+
 import { refPositionInViewport } from '../../Universal/scrollFunctions'
-import { createSignal } from 'solid-js';
 
 import * as ss from '../../Universal/Universal.styled';
 import * as s from './Services.styled';

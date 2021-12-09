@@ -1,0 +1,70 @@
+<mjml>
+  <mj-body background-color="#f1f1f1">
+    <mj-section>
+      <mj-column>
+      	<mj-image 
+        	width="350px" 
+          src="https://infograafikko-website.s3.eu-north-1.amazonaws.com/infograafikko-email-logo-bg-xl.png"></mj-image>
+      </mj-column>
+    </mj-section>
+        
+    <mj-section background-color="white">
+      <mj-column>
+				<mj-text
+          font-size="24px"
+          font-weight="700" 
+          color="#222222"
+          line-height="150%"
+          font-family="helvetica"
+          align="center"
+                 >Kiitos {{FirstName}}, että tilasit uutiskirjeeni.</mj-text>
+				<mj-image 
+        	width="800px" 
+          src="https://infograafikko-website.s3.eu-north-1.amazonaws.com/kansikuva-data-presentation.png" />
+        <mj-text 
+        	font-size="32px" 
+          line-height="150%" 
+          font-weight="700" 
+          color="#222222"
+         	font-family="helvetica">
+          Opas: Näin pidät parempia presentaatioita</mj-text>
+        <mj-text
+          font-size="18px"
+          color="#757575"
+          line-height="150%"
+          font-family="helvetica"
+                 >Työelämän avaintaitoja on kyky kommunikoida ammattitaitoaan muille. Presentaatioillla haluamme saada aikaan muutosta ihmisten toiminnassa tai ajattelutavassa. Tämän oppaan avulla teet presentaatioistasi visuaalisesti kiinnostavia ja mukaansatempaavia.</mj-text>
+				<mj-button
+         	font-family="Helvetica"
+          font-weight="700"
+          font-size="18px"
+          color="black"
+          background-color="#F7931E"
+          href="https://infograafikko-website.s3.eu-north-1.amazonaws.com/infografiikkaopas.pdf"
+         >
+          Lataa ilmainen opas
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#333333">
+      <mj-column
+        width="50%"
+        >
+        <mj-text
+          font-size="12px"
+          color="white"
+          line-height="150%"
+          font-family="helvetica"
+          align="center"
+                 >Sait tämän sähköpostin, koska olet tilannut <a style="color: white;" href="https://www.infograafikko.fi">Infograafikko</a>-uutiskirjeen.</mj-text>
+     		<mj-text
+          font-size="12px"
+          color="white"
+          line-height="150%"
+          font-family="helvetica"
+          align="center"
+                 >Etkö halua enää näitä viestejä? <a style="color: white;" href="{{amazonSESUnsubscribeUrl}}">Lopeta tilaus</a></mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -1,5 +1,6 @@
 export const getImagesInsideRef = (ref,identifier) => new Promise(resolve => {
 
+
     let waitInstances = 0;
 
     const checkLoaded = () => {

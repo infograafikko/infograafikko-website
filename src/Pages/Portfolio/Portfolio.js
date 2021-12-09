@@ -1,25 +1,35 @@
-import { styled, keyframes } from "solid-styled-components";
-import PortfolioList from "./img/PortfolioList";
+import { styled } from "solid-styled-components";
+import * as ss from '../Universal/Universal.styled';
+
+import { useData, Link } from "solid-app-router";
+
 
 const RenderWorkContainer = ({works}) => {
     return (
-        <For each={works}>{work => {
-            return(
-                <BGImg 
-                    bgImg={work.bgImg}
-                />
-            )
-        }}</For>      
+        <ImgsContainer>
+            <For each={works}>{work => {
+                return(
+                    <ImgContainer>
+                        <Link href={"/portfolio/" + work.url}>
+                            <BGImg 
+                                bgImg={work.bgImg}
+                            />
+                        </Link>
+                    </ImgContainer>
+                )
+            }}</For>      
+        </ImgsContainer>
     )
 }
 
-export default function Portfolio({
+export default function Portfolio() {
 
-}) {
+    const portfolioList = useData();
     return(
         <Container>
+            <ss.Title style={{"text-align": "center"}}>Portfolio</ss.Title>
             <RenderWorkContainer 
-                works={PortfolioList}
+                works={portfolioList}
             />
         </Container>
     )
@@ -27,12 +37,27 @@ export default function Portfolio({
 
 const Container = styled("div")(
     props => `
-    padding: 6px 16px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 12px 16px;
   `
 );
+
+const ImgContainer = styled("div")(
+    props => `
+    
+  `
+);
+
+
+const ImgsContainer = styled("div")(
+    props => `
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    padding: 6px 16px;
+    margin: 10px 0;
+    `
+);
+
 
 const BGImg = styled("div")(
     props => `

@@ -7,8 +7,10 @@
   },
   "dependencies": {
     "btoa": "^1.2.1",
+    "dotenv": "^10.0.0",
     "gh-pages": "^3.2.3",
     "solid-app-router": "^0.1.11",
+    "solid-markdown": "^1.1.0",
     "solid-styled-components": "^0.27.3"
   },
   "scripts": {

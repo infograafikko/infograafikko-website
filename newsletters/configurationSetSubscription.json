@@ -1,0 +1,12 @@
+{
+    "ConfigurationSetName": "newsletterSubscription",
+    "ReputationOptions": {
+        "ReputationMetricsEnabled": true
+    },
+    "SendingOptions": {
+        "SendingEnabled": true
+    },
+    "SuppressionOptions": {
+        "SuppressedReasons": ["BOUNCE","COMPLAINT"]
+    }
+}

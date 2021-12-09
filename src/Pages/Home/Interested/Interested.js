@@ -33,6 +33,7 @@ export default function Interested({title,text}) {
 
                 >   
                     <div style={{
+                        /* BgImg component has a bug which reloads constantly bgimage */
                         "background-image": `url(${MeImage})`,
                         "background-size": "cover",
                         "background-position": "center",

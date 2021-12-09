@@ -52,7 +52,7 @@ export const Text = styled("p")(
     font-weight: 300;
     font-size: 18px;
     margin: 24px 0;
-    line-height: 1.2;
+    line-height: 1.4;
 
     @media only screen and (max-width: ${sizes.m}) {
         width: calc(100% - 20px);

@@ -53,7 +53,7 @@ export default function Lead({
                     heightM="50vh" 
                     heighS="50vh" 
                     src={leadLaptop} 
-                    animate={scrollPos() !== -20}
+                    animate={true}
                     alt={"Infografikka esittää, miten kiviaines kiertää työmaalla"}
 
                 />

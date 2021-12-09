@@ -1,0 +1,18 @@
+aws sesv2 create-configuration-set --cli-input-json file://configurationSetSubscription.json --profile infograafikkoSes
+
+  //aws sesv2 send-email --cli-input-json file://sendOpasToSingleUser.json --profile infograafikkoSes
+
+//aws sesv2 create-email-template --cli-input-json file://test1Template.json --profile infograafikkoSes
+//aws sesv2 update-email-template --cli-input-json file://test1Template.json --profile infograafikkoSes
+
+//aws sesv2 get-contact --contact-list-name Infograafikko --email-address joel.kanerva@gmail.com --profile infograafikkoSes
+
+aws sesv2 get-contact-list --contact-list-name Infograafikko --profile infograafikkoSes
+
+//aws sesv2 list-contacts --contact-list-name Infograafikko --profile infograafikkoSes
+
+aws sesv2 delete-contact --contact-list-name Infograafikko --email-address joel@infograafikko.fi --profile infograafikkoSes
+
+aws sesv2 create-contact --cli-input-json file://addUserToList.json --profile infograafikkoSes
+
+aws sesv2 send-email --cli-input-json file://sendTestMail.json --profile infograafikkoSes

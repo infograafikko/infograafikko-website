@@ -1,0 +1,14 @@
+{
+    "ConfigurationSetName": "newsletter",
+    "Content": {
+        "Template": {
+            "TemplateName": "Test2",
+            "TemplateData": "{ \"firstName\":\"Alejandro\", \"lastName\": \"alligator\" }"
+        }
+    },
+    "FromEmailAddress":"Infograafikko <joel@infograafikko.fi>",
+    "Destination": {
+      "ToAddresses": [ "joel.kanerva@gmail.com"
+      ]
+    }
+  }
