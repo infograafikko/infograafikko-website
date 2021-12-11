@@ -31,6 +31,7 @@ const RenderParagraphs = ({paragraphs}) => {
 
 export default function PortfolioItems() {
     const itemData = useData();
+    console.log(itemData)
     const location = useLocation();
     const filteredData = createMemo(() => filterData(location.pathname, itemData));
 
