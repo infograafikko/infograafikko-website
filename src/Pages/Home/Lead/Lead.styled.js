@@ -49,7 +49,6 @@ export const Title = styled("h1")(
 export const Text = styled("p")(
     props => `
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
     font-size: 18px;
     margin: 24px 0;
     line-height: 1.4;

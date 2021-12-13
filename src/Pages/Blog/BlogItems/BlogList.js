@@ -1,35 +1,52 @@
-import Example from './kansikuva-data-presentation.png';
-import ExampleText from './test.md';
+import Example from '../../../assets/img/blog/kansikuva-data-presentation.png';
+import { html as muutosjohtaminen } from './muutosjohtaminen.md'
+import { html as nuorisobarometriVaikuttavuus } from './nuorisobarometri-vaikuttavuus.md'
+import { html as paremmatKaaviot } from './paremmat-kaaviot.md'
+import { html as parhaatKaytannot } from './tiedon-visualisointi-parhaat-kaytannot.md'
+import { html as satokausikalenteri } from './satokausikalenteri.md'
+
+const dir = '../../../assets/img/blog/'
+const imgDir = new URL(dir, import.meta.url).href;
 
 export default [
     {
         url: "muutosjohtaminen-tiedon-visualisoinnin-nakokulmasta",
         title: "Muutosjohtaminen tiedon visualisoinnin näkökulmasta",
-        lead: "Tärkeintä muutosjohtamisessa on toimeenpano. Muutosvoimaa saat aikaan, kun yhdistät datan, visualisoinnin ja narratiivin mukaansa tempaavaksi yhtenäiseksi paketiksi.",
-        content: 
-`LinkedIn kerää vuosittain listan halutuimmista työntekijöiden taidoista. Jo useamman vuoden ajan tilastollisen analysoinnin ja datan murskauksen taidot ovat olleet listalla halutuimpien joukossa. Nyt uutena tulokkaana listalle on kohonnut tiedon esittäminen. Tämä kertoo yhä paremmasta ymmärryksestä datan esittämisen tärkeydestä.
-Vuonna 2009 Googlen pääekonomisti tohtori Hal R. Varian totesi, että “Kyky ymmärtää dataa, jalostaa sitä, saada siitä oivalluksia, visualisoida sitä ja kyky kommunikoida sen avulla ovat taitoja, jotka ovat äärimmäisen tärkeitä tulevina vuosikymmeninä.”`,
-        coverImg: Example
+        lead: "Tärkeintä muutosjohtamisessa on toimeenpano. Kun kerrot uusista tutkimustuloksista sidosryhmillesi, tärkeintä on tehdä se niin kiinnostavasti, että tämän jälkeen laitetaan hihat heilumaan.",
+        content: muutosjohtaminen,
+        imgDir,
+        coverImg: 'kansikuva-data-presentation.png'
     },
     {
-        url: "muutosjohtaminen-tiedon-visualisoinnin-nakokulmasta2",
-        title: "Muutosjohtaminen tiedon visualisoinnin näkökulmasta",
-        lead: "Tärkeintä muutosjohtamisessa on toimeenpano. Kun kerrot uusista tutkimustuloksista sidosryhmillesi, tärkeintä on tehdä se niin kiinnostavasti, että tämän jälkeen laitetaan hihat heilumaan.",
-        content: ExampleText,
-        coverImg: Example
+        url: "nuorisobarometri-vaikuttavuus",
+        title: "Näin infografiikka on parantanut Nuorisobarometrin vaikuttavuutta",
+        lead: "Nuorisobarometrin vaikuttavuustuloksiin on oltu viimeisen kahden vuoden ajan erityisen tyytyväisiä. Tutkimustulos on välitetty aiempaa laajemmalle joukolle kustannustehokkaalla tavalla. Lue, miten infografiikka on auttanut parantamaan tuloksia.",
+        content: nuorisobarometriVaikuttavuus,
+        imgDir,
+        coverImg: 'nuorisobarometri.jpg'
     },
     {
-        url: "muutosjohtaminen-tiedon-visualisoinnin-nakokulmasta3",
-        title: "Muutosjohtaminen tiedon visualisoinnin näkökulmasta",
-        lead: "Tärkeintä muutosjohtamisessa on toimeenpano. Kun kerrot uusista tutkimustuloksista sidosryhmillesi, tärkeintä on tehdä se niin kiinnostavasti, että tämän jälkeen laitetaan hihat heilumaan.",
-        content: `Lorem ipsum`,
-        coverImg: Example
+        url: "paremmat-graafit-esityksiin",
+        title: "Näin teet parempia graafeja esityksiin",
+        lead: "Tässä muutama infograafikon vinkki, miten esittää tehdä selkeämpiä ja ymmärrettävämpiä graafeja.",
+        content: paremmatKaaviot,
+        imgDir,
+        coverImg: 'paremmat-kaaviot.jpg'
     },
     {
-        url: "muutosjohtaminen-tiedon-visualisoinnin-nakokulmasta4",
-        title: "Muutosjohtaminen tiedon visualisoinnin näkökulmasta",
-        lead: "Tärkeintä muutosjohtamisessa on toimeenpano. Kun kerrot uusista tutkimustuloksista sidosryhmillesi, tärkeintä on tehdä se niin kiinnostavasti, että tämän jälkeen laitetaan hihat heilumaan.",
-        content: `Lorem ipsum`,
-        coverImg: Example
-    }
+        url: "tiedon-visualisointi-parhaat-kaytannot",
+        title: "Tiedon visualisointi - parhaat käytännöt",
+        lead: "Millaisiin luokkiin tiedon visualisointitavat voi jakaa? Tämä artikkeli auttaa ymmärtämään sinua paremmin infografiikan perusteet.",
+        content: parhaatKaytannot,
+        imgDir,
+        coverImg: 'concept-visualization.jpeg'
+    },
+    {
+        url: "satokausikalenteri-kotimaiset-tuotteet",
+        title: "Kotimaiset satotuotteet -kausikalenteri",
+        lead: "Kotimaiset satotuotteet ovat erinomainen tapa tukea suomalaista lähellä tuotettua ruokaa. Tässä kalenteri sesonkien seuraajalle.",
+        content: satokausikalenteri,
+        imgDir,
+        coverImg: 'satokausikalenteri-elokuu.png'
+    },
 ]
