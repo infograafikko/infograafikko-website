@@ -134,6 +134,6 @@ export const Img = styled("img")(
     display: block;
     margin: 20px auto;
     max-width: 1200px;
-
+    width: 100%;
   `
 );

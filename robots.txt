@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /peruuta-uutiskirje
+Sitemap: https://www.infograafikko.fi/sitemap.txt

@@ -3,9 +3,11 @@ import * as ss from '../Universal/Universal.styled';
 import { useData, Link } from "solid-app-router";
 
 const RenderBlogItems = ({blogItems}) => {
+
     return (
         <BlogsContainer>
             <For each={blogItems}>{blog => {
+                console.log("https://www.infograafikko.fi/blogi/" + blog.url)
                 return(
                     <BlogContainer>
                         <Link href={"/blogi/" + blog.url}>

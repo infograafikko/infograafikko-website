@@ -8,6 +8,7 @@ const RenderWorkContainer = ({works}) => {
     return (
         <ImgsContainer>
             <For each={works}>{work => {
+                //console.log("https://www.infograafikko.fi/portfolio/" + work.url)
                 return(
                     <ImgContainer>
                         <Link href={"/portfolio/" + work.url}>
@@ -83,11 +84,6 @@ const BGImg = styled("div")(
     @media only screen and (max-width: 680px) {
         width: calc(50vw - 32px);
         height: calc(50vw - 32px);
-    }
-
-    @media only screen and (max-width: 500px) {
-        width: calc(100vw - 32px);
-        height: calc(100vw - 32px);
     }
   `
 );

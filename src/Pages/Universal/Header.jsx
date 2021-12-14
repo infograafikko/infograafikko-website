@@ -21,7 +21,7 @@ function RenderMenuItems({menuItemData}) {
 export default function Header({
     pages
     }){
-
+    //pages.map(p => console.log("https://www.infograafikko.fi"+p.path))
     const logoData = pages.filter(p => p.placement == "logo")[0]
     const menuItemData = pages.filter(p => p.placement == "menuItem")
 
