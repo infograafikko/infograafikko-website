@@ -133,7 +133,7 @@ export const Img = styled("img")(
     props => `
     display: block;
     margin: 20px auto;
-    max-width: 1200px;
+    max-width: 800px;
     width: 100%;
   `
 );
