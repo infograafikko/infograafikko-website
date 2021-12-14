@@ -36,7 +36,7 @@ export default function PortfolioItems() {
                 </Show>
                 <Show when={filteredData().img}>
                     <InfographicImage 
-                        src={new URL(filteredData().imgDir + filteredData().img, import.meta.url).href}
+                        src={filteredData().imgDir + filteredData().img}
                     />
                 </Show>
                 <Show when={filteredData().pdf}>

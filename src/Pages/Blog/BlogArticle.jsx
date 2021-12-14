@@ -46,7 +46,7 @@ export default function PortfolioItems() {
                     <HeaderContainer>
                         <ss.Title>{filteredData().title}</ss.Title>
                         <ss.Paragraph style={{"font-size": "24px"}}><SolidMarkdown children={filteredData().lead} /></ss.Paragraph>
-                        <CoverImg src={new URL(filteredData().imgDir + filteredData().coverImg, import.meta.url).href} />
+                        <CoverImg src={filteredData().imgDir + filteredData().coverImg} />
                     </HeaderContainer>
 
                     <ContentContainer innerHTML={content} />
