@@ -45,7 +45,6 @@ export default function ContactMe({ }) {
 const Container = styled("div")(
     props => `
     padding: 16px 16px;
-    max-width: 1200px;
     margin: auto;
     min-height: 100vh;
     background-color: #F1F2F4;
@@ -72,6 +71,8 @@ const ContentContainer = styled("div")(
     flex-direction: row;
     background-color: white;
     padding: 16px;
+    max-width: 1200px;
+    margin: auto;
 
     @media only screen and (max-width: ${sizes.m}) {
         flex-direction: column;
@@ -132,5 +133,7 @@ export const Img = styled("img")(
     props => `
     display: block;
     margin: 20px auto;
+    max-width: 1200px;
+
   `
 );
