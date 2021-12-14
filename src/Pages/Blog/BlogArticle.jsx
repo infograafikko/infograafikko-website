@@ -37,6 +37,9 @@ export default function PortfolioItems() {
     const location = useLocation();
     const filteredData = createMemo(() => filterData(location.pathname, itemData));
 
+    console.log(location)
+    console.log(filteredData)
+
     const content = formatMarkdown(filteredData().content, filteredData().imgDir)
     
     return(
@@ -46,7 +49,7 @@ export default function PortfolioItems() {
                     <HeaderContainer>
                         <ss.Title>{filteredData().title}</ss.Title>
                         <ss.Paragraph style={{"font-size": "24px"}}><SolidMarkdown children={filteredData().lead} /></ss.Paragraph>
-                        <CoverImg src={filteredData().imgDir + filteredData().coverImg} />
+                        <CoverImg src={new URL(filteredData().imgDir + filteredData().coverImg, import.meta.url).href} />
                     </HeaderContainer>
 
                     <ContentContainer innerHTML={content} />
