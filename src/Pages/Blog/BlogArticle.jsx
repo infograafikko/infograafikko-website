@@ -38,7 +38,7 @@ export default function PortfolioItems() {
     const filteredData = createMemo(() => filterData(location.pathname, itemData));
 
     console.log(location)
-    console.log(filteredData)
+    console.log(filteredData())
 
     const content = formatMarkdown(filteredData().content, filteredData().imgDir)
     
