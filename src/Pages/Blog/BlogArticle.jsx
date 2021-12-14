@@ -32,7 +32,6 @@ function filterData(path, data){
 
 export default function PortfolioItems() {
     const itemData = useData();
-    console.log(sizes)
 
     
     const location = useLocation();
@@ -47,7 +46,7 @@ export default function PortfolioItems() {
                     <HeaderContainer>
                         <ss.Title>{filteredData().title}</ss.Title>
                         <ss.Paragraph style={{"font-size": "24px"}}><SolidMarkdown children={filteredData().lead} /></ss.Paragraph>
-                        <CoverImg src={filteredData().imgDir + filteredData().coverImg} />
+                        <CoverImg src={new URL(filteredData().imgDir + filteredData().coverImg, import.meta.url).href} />
                     </HeaderContainer>
 
                     <ContentContainer innerHTML={content} />

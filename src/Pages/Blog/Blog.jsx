@@ -10,7 +10,7 @@ const RenderBlogItems = ({blogItems}) => {
                     <BlogContainer>
                         <Link href={"/blogi/" + blog.url}>
                             <CoverImg 
-                                src={blog.imgDir + blog.coverImg}
+                                src={new URL(blog.imgDir + blog.coverImg, import.meta.url).href}
                             />
                             <BlogTitle>{blog.title}</BlogTitle>
                             <BlogLead>{blog.lead}</BlogLead>

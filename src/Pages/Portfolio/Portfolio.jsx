@@ -12,7 +12,7 @@ const RenderWorkContainer = ({works}) => {
                     <ImgContainer>
                         <Link href={"/portfolio/" + work.url}>
                             <BGImg 
-                                bgImg={work.imgDir + work.bgImg}
+                                bgImg={new URL(work.imgDir + work.bgImg, import.meta.url).href}
                             />
                         </Link>
                     </ImgContainer>

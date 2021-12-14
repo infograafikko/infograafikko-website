@@ -1,11 +1,10 @@
-import Example from '../../../assets/img/blog/kansikuva-data-presentation.png';
 import { html as muutosjohtaminen } from './muutosjohtaminen.md'
 import { html as nuorisobarometriVaikuttavuus } from './nuorisobarometri-vaikuttavuus.md'
 import { html as paremmatKaaviot } from './paremmat-kaaviot.md'
 import { html as parhaatKaytannot } from './tiedon-visualisointi-parhaat-kaytannot.md'
 import { html as satokausikalenteri } from './satokausikalenteri.md'
 
-const dir = '../../../assets/img/blog/'
+const dir = '/public/img/blog/'
 const imgDir = new URL(dir, import.meta.url).href;
 
 export default [

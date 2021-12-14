@@ -1,6 +1,6 @@
 
-const dir = '../../../assets/img/portfolio/'
-const imgDir = new URL(dir, import.meta.url).href;
+
+const imgDir = '/public/img/portfolio/'
 
 export default [
     {
