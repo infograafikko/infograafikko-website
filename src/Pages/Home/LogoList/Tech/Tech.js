@@ -1,14 +1,4 @@
-import Illustrator from './illustrator.svg';
-import Indesign from './indesign.svg';
-import CreativeCloud from './cc.svg';
-import JS from './js.svg';
-import React from './react.svg';
-import AWS from './aws.svg';
-import D3 from './d3.svg';
-import Node from './node.svg';
-import R from './r.svg';
-import HTML from './html.svg';
-import CSS from './css.svg';
+
 
 const dir = '/img/home/'
 const imgDir = new URL(dir, import.meta.url).href;
