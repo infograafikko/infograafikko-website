@@ -4,7 +4,7 @@ import { html as paremmatKaaviot } from './paremmat-kaaviot.md'
 import { html as parhaatKaytannot } from './tiedon-visualisointi-parhaat-kaytannot.md'
 import { html as satokausikalenteri } from './satokausikalenteri.md'
 
-const dir = '/public/img/blog/'
+const dir = '/img/blog/'
 const imgDir = new URL(dir, import.meta.url).href;
 
 export default [

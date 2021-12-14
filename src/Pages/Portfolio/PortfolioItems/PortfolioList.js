@@ -1,6 +1,6 @@
 
 
-const imgDir = '/public/img/portfolio/'
+const imgDir = '/img/portfolio/'
 
 export default [
     {
