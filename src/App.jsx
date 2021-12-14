@@ -14,8 +14,8 @@ const pages = [
   {
     path: "/",
     component: lazy(() => import("./Pages/Home/Home")),
-    menuText: "",
-    placement: "logo"
+    menuText: "Etusivu",
+    placement: "menuItem"
   },
   {
     path: "/blogi",

@@ -56,7 +56,7 @@ const Container = styled("div")(
     width: 100%;
     position: relative;
 
-    @media only screen and (max-width: ${sizes.s}) {
+    @media only screen and (max-width: ${sizes.m}) {
         flex-direction: column;
     }
 
@@ -95,7 +95,7 @@ const LogoHolder = styled("div")(
     bottom: 16px;
     right: 50px;
 
-    @media only screen and (max-width: ${sizes.s}) {
+    @media only screen and (max-width: ${sizes.m}) {
         height: 30px;
     }
 

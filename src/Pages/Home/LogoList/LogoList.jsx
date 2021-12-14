@@ -6,9 +6,10 @@ import { sizes } from "../../../lib/screenSizes";
 function RenderLogos({logos, maxHeight, maxHeightM, margin, marginM}) {
   return(
     <For each={logos}>{(logo) => {
+      
       return(
         <Img 
-          src={logo.component} 
+          src={logo.imgDir + logo.img} 
           maxHeight={maxHeight}
           maxHeightM={maxHeightM}  
           margin={margin}
@@ -68,4 +69,12 @@ const Img = styled("Img")(
     }
 
   `
+);
+
+const Svg = styled("svg")(
+  props => `
+  width: 100%;
+  height: auto;  
+
+`
 );

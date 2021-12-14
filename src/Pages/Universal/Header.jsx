@@ -1,6 +1,6 @@
 import { styled } from "solid-styled-components";
 import { NavLink } from "solid-app-router";
-
+import { sizes } from '../../lib/screenSizes'
 import Logo from "./Logo";
 
 function RenderMenuItems({menuItemData}) {
@@ -26,8 +26,9 @@ export default function Header({
     const menuItemData = pages.filter(p => p.placement == "menuItem")
 
      return(
+        <Container>
         <MenuContainer>
-            <NavLinkLogo 
+            {/*<NavLinkLogo 
                 class="nav" 
                 href={logoData.path}
                 height="40px"
@@ -39,14 +40,27 @@ export default function Header({
                     color="#f7931e"
                     color2="#fff"
                 />
-            </NavLinkLogo>
+            </NavLinkLogo>*/}
             <MenuItems>
                 <RenderMenuItems 
                     menuItemData={menuItemData}
                 />
+                <NavLinkLogo 
+                    class="nav" 
+                    href={menuItemData[0].path}
+                    height="40px"
+                    heightM="30px"
+                    margin="6px"
+                    linkToMainPage={true}
+                    >
+                    <Logo
+                        color="#f7931e"
+                        color2="#fff"
+                    />
+                </NavLinkLogo>
             </MenuItems>
         </MenuContainer>
-         
+        </Container>
      )
 }
 
@@ -55,6 +69,16 @@ const NavLinkLogo = styled(NavLink)(
     height: ${props.height};
     margin: ${props.margin};
     cursor: ${props.linkToMainPage ? "pointer" : "default"};
+    width: 160px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    @media only screen and (max-width: 500px) {
+        
+        display: none;
+    }
   `
 );
 
@@ -65,6 +89,21 @@ const MenuContainer = styled("div")(
     height: 50px;
     width: 100%;
     display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 30;
+  `
+);
+
+const Container = styled("div")(
+    props => `
+    position: relative;
+    background-color: #333;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: 0;
   `
 );
 

@@ -10,49 +10,63 @@ import R from './r.svg';
 import HTML from './html.svg';
 import CSS from './css.svg';
 
+const dir = '/img/home/'
+const imgDir = new URL(dir, import.meta.url).href;
+
 export default [
     {
-        component: Illustrator,
+        imgDir,
+        img: 'tech.svg#illustrator',
         alt: "Adobe Illustratorin logo"
     },
     {
-        component: Indesign,
+        imgDir,
+        img: 'tech.svg#indesign',
         alt: "Adobe Indesignin logo"
     },
     {
-        component: CreativeCloud,
+        imgDir,
+        img: 'tech.svg#cc',
         alt: "Adobe Creative Cloudin logo"
     },
     {
-        component: JS,
+        imgDir,
+        img: 'tech.svg#js',
         alt: "Javascriptin logo"
     },
     {
-        component: React,
+        imgDir,
+        img: 'tech.svg#react',
         alt: "Reactin logo"
     },
     {
-        component: AWS,
+        imgDir,
+        img: 'tech.svg#aws',
         alt: "Amazon Webservicesin logo"
     },
     {
-        component: D3,
+        imgDir,
+        img: 'tech.svg#d3',
         alt: "D3-kirjaston logo"
     },
     {
-        component: Node,
+        imgDir,
+        img: 'tech.svg#node',
         alt: "Node.js:n logo"
     },
     {
-        component: R,
+        imgDir,
+        img: 'tech.svg#r',
         alt: "R-ohjelmointikielen logo"
     },
     {
-        component: HTML,
+        imgDir,
+        img: 'tech.svg#html',
         alt: "HTML5-logo"
     },
     {
-        component: CSS,
+        imgDir,
+        img: 'tech.svg#css',
         alt: "CSS:n logo"
     },
 ];

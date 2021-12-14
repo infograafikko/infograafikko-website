@@ -1,38 +1,41 @@
-import OPH from './oph.svg';
-import Tieteentekijat from './tt.svg';
-import UTU from './utu.svg';
-import UOU from './uou.svg';
-import Ethica from './ethica.svg';
-import Accountor from './Accountor_logo.svg';
-import Hki from './hki.svg';
+
+const dir = '/img/home/'
+const imgDir = new URL(dir, import.meta.url).href;
 
 export default [
     {
-        component: OPH,
+        imgDir,
+        img: 'clients.svg#oph',
         alt: "Opetushallituksen logo"
     },
     {
-        component: Tieteentekijat,
+        imgDir,
+        img: 'clients.svg#tieteentekijat',
         alt: "Tieteentekijöiden logo"
     },
     {
-        component: UTU,
+        imgDir,
+        img: 'clients.svg#turunyliopisto',
         alt: "Turun yliopiston logo"
     },
     {
-        component: UOU,
+        imgDir,
+        img: 'clients.svg#oulunyliopisto',
         alt: "Oulun yliopiston logo"
     },
     {
-        component: Ethica,
+        imgDir,
+        img: 'clients.svg#ethica',
         alt: "Ethican logo"
     },
     {
-        component: Hki,
+        imgDir,
+        img: 'clients.svg#helsinki',
         alt: "Helsingin kaupungin logo"
     },
     {
-        component: Accountor,
+        imgDir,
+        img: 'clients.svg#accountor',
         alt: "Accountorin logo"
     },
 ];
