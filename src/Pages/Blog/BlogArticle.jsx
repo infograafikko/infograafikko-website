@@ -1,4 +1,4 @@
-import { createMemo, Show } from "solid-js";
+import { createMemo, Show, Suspense } from "solid-js";
 import { useLocation, useData } from "solid-app-router";
 import { styled } from "solid-styled-components";
 import * as h from '../Home/Home.styled';
@@ -43,6 +43,7 @@ export default function PortfolioItems() {
     const content = formatMarkdown(filteredData().content, filteredData().imgDir)
     
     return(
+        <Suspense>
         <Show when={filteredData()} fallback={<NotFound />}>
             <Container>
                 <BlogContent>
@@ -67,6 +68,7 @@ export default function PortfolioItems() {
             </h.AnimatedContainer>
 
         </Show>
+        </Suspense>
     )
 
     
