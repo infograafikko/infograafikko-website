@@ -7,6 +7,7 @@ import * as ss from '../Universal/Universal.styled';
 import SolidMarkdown from "solid-markdown";
 
 import { sizes } from '../../lib/screenSizes.js'
+import { filterDataBasedOnUrl } from '../../lib/filterDataBasedOnUrl.js'
 
 import NotFound from '../notFound'
 import Newsletter from '../Home/Newsletter/Newsletter'
@@ -19,23 +20,12 @@ function formatMarkdown(markdownAsString, imgDir){
     return formattedMarkdown
 }
 
-function filterData(path, data){
-
-    //parse slug from url
-    const splitted = path.split("/blogi/");
-    const parsedSlug =  splitted.at(-1)
-
-    //check if url matches
-    const slugInData = data.filter(d => d.url === parsedSlug)
-    return slugInData[0];
-}
-
 export default function PortfolioItems() {
     const itemData = useData();
 
     
     const location = useLocation();
-    const filteredData = createMemo(() => filterData(location.pathname, itemData));
+    const filteredData = createMemo(() => filterDataBasedOnUrl(location.pathname, itemData, "/blogi/"));
 
     const content = formatMarkdown(filteredData().content, filteredData().imgDir)
     

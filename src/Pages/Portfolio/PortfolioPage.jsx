@@ -4,25 +4,16 @@ import { styled } from "solid-styled-components";
 import * as ss from '../Universal/Universal.styled';
 import SolidMarkdown from "solid-markdown";
 import { sizes } from '../../lib/screenSizes.js'
-import Button from '../Universal/Button';
+import { filterDataBasedOnUrl } from '../../lib/filterDataBasedOnUrl.js'
 
+import Button from '../Universal/Button';
 import NotFound from '../notFound'
 
-function filterData(path, data){
-
-    //parse slug from url
-    const splitted = path.split("/portfolio/");
-    const parsedSlug =  splitted.at(-1)
-
-    //check if url matches
-    const slugInData = data.filter(d => d.url === parsedSlug)
-    return slugInData[0];
-}
 
 export default function PortfolioItems() {
     const itemData = useData();
     const location = useLocation();
-    const filteredData = createMemo(() => filterData(location.pathname, itemData));
+    const filteredData = createMemo(() => filterDataBasedOnUrl(location.pathname, itemData, "/portfolio/"));
     //const match = useMatch(() => props.href);
 
     return(
@@ -39,21 +30,22 @@ export default function PortfolioItems() {
                         src={filteredData().imgDir + filteredData().img}
                     />
                 </Show>
+                <ButtonContainer>
                 <Show when={filteredData().pdf}>
-                <iframe
-                    style={{"height": "100vh", "margin-top": "20px"}}
-                    src={"https://drive.google.com/viewerng/viewer?embedded=true&url=" + filteredData().pdf +  "#toolbar=0&scrollbar=0"}
-                    frameBorder="0"
-                    scrolling="auto"
-                    width="100%"
-                ></iframe>
+                    <a href={filteredData().pdf} target="_blank">
+                        <Button 
+                            type="primary"
+                            text="Avaa PDF uudella välilehdellä"
+                        />
+                    </a>
                 </Show>
                 <Link style={{"margin-top": "20px"}} href='/portfolio'>
                     <Button 
                         text={"← Takaisin portfolioon"}
-                        buttonType="primary"
+                        buttonType="secondary"
                     />                
                 </Link>
+                </ButtonContainer>
                 </ContentContainer>
             </Container>
             
@@ -66,6 +58,15 @@ const Container = styled("div")(
     props => `
     padding: 16px 16px;
     background-color: #F1F2F4;
+    min-height: 100vh;
+  `
+);
+
+const ButtonContainer = styled("div")(
+    props => `
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
 
   `
 );
