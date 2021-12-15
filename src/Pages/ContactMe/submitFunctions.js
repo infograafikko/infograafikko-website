@@ -52,10 +52,10 @@ async function postEmail(senderEmail, message, e){
 
 }
 
-export function submitForm(emailLabel, emailInput, textInput, e) {
+export function submitForm(emailLabel, emailInput, textInput, question, e) {
     e.preventDefault();
     //valid email address
-    if(validateEmail(emailInput.value) && textInput.value.length > 0) {
+    if(validateEmail(emailInput.value) && textInput.value.length > 0 && question.value == "Tätä kenttää sinun ei tule muuttaa") {
         //post mail using fetch request
         postEmail(emailInput.value, textInput.value, e)
 

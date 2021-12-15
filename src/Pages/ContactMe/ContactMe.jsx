@@ -12,6 +12,7 @@ export default function ContactMe({ }) {
     let emailLabel
     let emailInput;
     let textInput;
+    let question;
 
     return(
         <Container>
@@ -22,10 +23,14 @@ export default function ContactMe({ }) {
                     <ss.Paragraph>Ota yhteyttä oheisella lomakkeella, ja kerro visualisointitarpeestasi. Olen yhteydessä mahdollisimman pian.</ss.Paragraph>
                     <ss.Paragraph>Voit lähettää sähköpostin liitteineen myös suoraan osoitteeseen <a href="mailto:joel@infograafikko.fi">joel@infograafikko.fi</a>.</ss.Paragraph>
                 </ParagraphContainer>
-                <Form onSubmit={(e) => submitForm(emailLabel, emailInput, textInput, e)}>
+                <Form onSubmit={(e) => submitForm(emailLabel, emailInput, textInput, question, e)}>
                     <FormContainer>
                         <FieldContainer ref={emailLabel}>Sähköpostiosoitteesi*</FieldContainer>
                         <Input ref={emailInput} height="short" type="text" value="" name="EMAIL" />
+                    </FormContainer>
+                    <FormContainer style={{"position": "absolute", "left": "-1234px"}}>
+                        <FieldContainer>Kysymys*</FieldContainer>
+                        <Input ref={question} height="short" type="text" value="Tätä kenttää sinun ei tule muuttaa" name="QUESTION" />
                     </FormContainer>
                     <FormContainer>
                         <FieldContainer>Viestisi</FieldContainer>

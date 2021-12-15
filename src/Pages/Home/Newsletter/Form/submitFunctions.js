@@ -41,10 +41,10 @@ async function postEmail(senderEmail, firstName, lastName, e){
 
 }
 
-export function submitForm(emailInput, emailLabel, firstNameInput, firstNameLabel, lastNameInput, lastNameLabel, e) {
+export function submitForm(emailInput, emailLabel, firstNameInput, firstNameLabel, lastNameInput, lastNameLabel, question, e) {
     e.preventDefault();
     //valid email address
-    if(validateEmail(emailInput.value) && firstNameInput.value.length > 0 && lastNameInput.value.length > 0) {
+    if(validateEmail(emailInput.value) && firstNameInput.value.length > 0 && lastNameInput.value.length > 0 && question.value == 'Tätä kenttää sinun ei tule muuttaa') {
         //post mail using fetch request
         const posted = postEmail(emailInput.value, firstNameInput.value, lastNameInput.value, e)
 

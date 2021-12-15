@@ -11,20 +11,25 @@ export default function FormLambda() {
     let firstNameInput;
     let lastNameLabel;
     let lastNameInput;
+    let question;
 
     return (
-        <Form onSubmit={(e) => submitForm(emailInput, emailLabel, firstNameInput, firstNameLabel, lastNameInput, lastNameLabel, e)}>
+        <Form onSubmit={(e) => submitForm(emailInput, emailLabel, firstNameInput, firstNameLabel, lastNameInput, lastNameLabel, question, e)}>
             <FormContainer>
-                <FieldContainer ref={emailLabel}>Sähköpostiosoitteesi*</FieldContainer>
+                <FieldContainer ref={emailLabel}>Sähköpostiosoite*</FieldContainer>
                 <Input ref={emailInput} height="short" type="text" value="" name="EMAIL" />
             </FormContainer>
             <FormContainer>
-                <FieldContainer ref={firstNameLabel}>Etunimesi*</FieldContainer>
+                <FieldContainer ref={firstNameLabel}>Etunimi*</FieldContainer>
                 <Input ref={firstNameInput} height="short" type="text" value="" name="FIRSTNAME" />
             </FormContainer>
+            <FormContainer style={{"position": "absolute", "left": "-1234px"}}>
+                <FieldContainer>Kysymys*</FieldContainer>
+                <Input ref={question} height="short" type="text" value="Tätä kenttää sinun ei tule muuttaa" name="QUESTION" />
+            </FormContainer>
             <FormContainer>
-                <FieldContainer ref={lastNameLabel}>Sukunimesi*</FieldContainer>
-                <Input ref={lastNameInput} height="short" type="text" value="" name="FIRSTNAME" />
+                <FieldContainer ref={lastNameLabel}>Sukunimi*</FieldContainer>
+                <Input ref={lastNameInput} height="short" type="text" value="" name="LASTNAME" />
             </FormContainer>
             <Button 
                 text={"Lataa opas"}

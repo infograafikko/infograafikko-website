@@ -30,7 +30,6 @@ export default function PortfolioItems() {
     const content = formatMarkdown(filteredData().content, filteredData().imgDir)
     
     return(
-        <Suspense>
         <Show when={typeof filteredData() == 'object'} fallback={<NotFound />}>
             <Container>
                 <BlogContent>
@@ -55,7 +54,6 @@ export default function PortfolioItems() {
             </h.AnimatedContainer>
 
         </Show>
-        </Suspense>
     )
 
     
