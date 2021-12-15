@@ -1,6 +1,7 @@
 import { styled } from "solid-styled-components";
 import * as ss from '../Universal/Universal.styled';
 import { useData, Link } from "solid-app-router";
+import { Show } from "solid-js";
 
 const RenderBlogItems = ({blogItems}) => {
 
@@ -29,12 +30,14 @@ export default function Blog(){
 
     return(
         <Container>
-            <ContentContainer>
-                <ss.Title>Blogi</ss.Title>
-                <RenderBlogItems
-                    blogItems={blogList}
-                />
-            </ContentContainer>
+            <Show when={blogList.length > 0}>
+                <ContentContainer>
+                    <ss.Title>Blogi</ss.Title>
+                    <RenderBlogItems
+                        blogItems={blogList}
+                    />
+                </ContentContainer>
+            </Show>
         </Container>
     )
 }

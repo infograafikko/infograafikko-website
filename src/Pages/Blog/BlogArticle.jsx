@@ -37,14 +37,11 @@ export default function PortfolioItems() {
     const location = useLocation();
     const filteredData = createMemo(() => filterData(location.pathname, itemData));
 
-    console.log(location)
-    console.log(filteredData())
-
     const content = formatMarkdown(filteredData().content, filteredData().imgDir)
     
     return(
         <Suspense>
-        <Show when={filteredData()} fallback={<NotFound />}>
+        <Show when={typeof filteredData() == 'object'} fallback={<NotFound />}>
             <Container>
                 <BlogContent>
                     <HeaderContainer>

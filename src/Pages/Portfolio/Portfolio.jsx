@@ -1,6 +1,6 @@
 import { styled } from "solid-styled-components";
 import * as ss from '../Universal/Universal.styled';
-
+import { Show } from 'solid-js';
 import { useData, Link } from "solid-app-router";
 
 
@@ -28,10 +28,12 @@ export default function Portfolio() {
     const portfolioList = useData();
     return(
         <Container>
-            <ss.Title style={{"text-align": "center"}}>Portfolio</ss.Title>
-            <RenderWorkContainer 
-                works={portfolioList}
-            />
+            <Show when={portfolioList.length > 0}>
+                <ss.Title style={{"text-align": "center"}}>Portfolio</ss.Title>
+                <RenderWorkContainer 
+                    works={portfolioList}
+                />
+            </Show>
         </Container>
     )
 }

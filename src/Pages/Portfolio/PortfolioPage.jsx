@@ -26,7 +26,7 @@ export default function PortfolioItems() {
     //const match = useMatch(() => props.href);
 
     return(
-        <Show when={filteredData()} fallback={<NotFound />}>
+        <Show when={typeof filteredData() == "object"} fallback={<NotFound />}>
             <Container>
                 <ContentContainer>
                 <ss.Title>{filteredData().name}</ss.Title>
