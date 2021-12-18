@@ -22,10 +22,9 @@ function formatMarkdown(markdownAsString, imgDir){
 
 export default function BlogArticle() {
     
-    const itemData = useData();
-    
+    const itemData = useData();    
     const location = useLocation();
-    const filteredData = createMemo(() => filterDataBasedOnUrl(location.pathname, itemData.texts, "/blogi/"));
+    const filteredData = createMemo(() => filterDataBasedOnUrl(location.pathname, itemData, "/blogi/"));
 
     const content = formatMarkdown(filteredData().content, filteredData().imgDir)
     

@@ -1,6 +1,6 @@
 import { lazy } from "solid-js";
 import { useRoutes } from "solid-app-router";
-import PortfolioList from "./Pages/Portfolio/PortfolioItems/PortfolioList";
+import portfolioItemsData from "./Pages/Portfolio/PortfolioItems/portfolioList.data";
 
 import blogArticlesData from "./Pages/Blog/BlogItems/blogList.data";
 
@@ -35,14 +35,14 @@ const pages = [
     path: "/portfolio",
     component: lazy(() => import("./Pages/Portfolio/Portfolio")),
     menuText: "Portfolio",
-    data: lazy(() => PortfolioList), //neat way of getting data to list of urls
+    data: portfolioItemsData, //neat way of getting data to list of urls
     placement: "menuItem"
   },
   {
     path: "/portfolio/:item",
     component: lazy(() => import("./Pages/Portfolio/PortfolioPage")),
     menuText: "",
-    data: (() => PortfolioList), //neat way of getting data to list of urls
+    data: portfolioItemsData, //neat way of getting data to list of urls
     placement: null
   },
   {

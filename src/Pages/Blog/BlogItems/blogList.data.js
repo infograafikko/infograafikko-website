@@ -54,7 +54,5 @@ const BLOGARTICLES =
         ]
 
 export default function (){
-    return {
-        texts: BLOGARTICLES
-      };    
+    return BLOGARTICLES 
 } 
