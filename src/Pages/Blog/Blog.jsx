@@ -30,11 +30,11 @@ export default function Blog(){
 
     return(
         <Container>
-            <Show when={blogList.length > 0}>
+            <Show when={blogList.texts.length > 0}>
                 <ContentContainer>
                     <ss.Title>Blogi</ss.Title>
                     <RenderBlogItems
-                        blogItems={blogList}
+                        blogItems={blogList.texts}
                     />
                 </ContentContainer>
             </Show>

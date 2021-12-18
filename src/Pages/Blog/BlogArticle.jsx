@@ -23,15 +23,13 @@ function formatMarkdown(markdownAsString, imgDir){
 export default function BlogArticle() {
     
     const itemData = useData();
-
     
     const location = useLocation();
-    const filteredData = createMemo(() => filterDataBasedOnUrl(location.pathname, itemData, "/blogi/"));
+    const filteredData = createMemo(() => filterDataBasedOnUrl(location.pathname, itemData.texts, "/blogi/"));
 
     const content = formatMarkdown(filteredData().content, filteredData().imgDir)
     
     return(
-        <Suspense>
             <Show when={typeof filteredData() == 'object'} fallback={<NotFound />}>
                 <Container id="blogArticle">
                     <BlogContent>
@@ -56,7 +54,6 @@ export default function BlogArticle() {
                 </h.AnimatedContainer>
 
             </Show>
-        </Suspense>
     )
 
     
