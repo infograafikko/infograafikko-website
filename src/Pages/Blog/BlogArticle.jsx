@@ -31,7 +31,7 @@ export default function PortfolioItems() {
     
     return(
         <Show when={typeof filteredData() == 'object'} fallback={<NotFound />}>
-            <Container>
+            <Container id="blogArticle">
                 <BlogContent>
                     <HeaderContainer>
                         <ss.Title>{filteredData().title}</ss.Title>

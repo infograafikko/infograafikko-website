@@ -16,6 +16,8 @@ export default function PortfolioItems() {
     const filteredData = createMemo(() => filterDataBasedOnUrl(location.pathname, itemData, "/portfolio/"));
     //const match = useMatch(() => props.href);
 
+    console.log(filteredData())
+
     return(
         <Show when={typeof filteredData() == "object"} fallback={<NotFound />}>
             <Container>

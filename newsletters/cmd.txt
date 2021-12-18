@@ -16,3 +16,10 @@ aws sesv2 delete-contact --contact-list-name Infograafikko --email-address joel@
 aws sesv2 create-contact --cli-input-json file://addUserToList.json --profile infograafikkoSes
 
 aws sesv2 send-email --cli-input-json file://sendTestMail.json --profile infograafikkoSes
+aws sesv2 create-import-job --cli-input-json file://importJob.json --profile infograafikkoSes
+
+job id 799be302-e59b-4c02-91cf-0afe5f509382
+103b8cc5-7d8c-4922-86e1-966fce90ccaa
+aws sesv2 get-import-job --job-id 103b8cc5-7d8c-4922-86e1-966fce90ccaa --profile infograafikkoSes
+
+aws sesv2 list-contacts --contact-list-name Infograafikko --page-size 200 --profile infograafikkoSes
