@@ -1,8 +1,9 @@
+import { createResource } from "solid-js";
 
 
 const imgDir = '/img/portfolio/'
 
-const PORTFOLIOITEMS = [
+const portfolioItems = [
     {
         url: "annalect-neural-network",
         name: "Neurotutkimus",
@@ -90,6 +91,20 @@ const PORTFOLIOITEMS = [
     }
 ]
 
-export default function (){
-    return PORTFOLIOITEMS;    
+function resourceData(portfolioId) {
+    const portfolioData = portfolioItems.filter(d => d.url == portfolioId)[0]
+    return portfolioData
+}
+
+export default function ({params, location, navigate}){
+    const portfolioId = params.id;
+
+    //In portfolio item page
+    if(portfolioId !== undefined) {
+        const [portfolioData] = createResource(() => portfolioId, resourceData)
+        return portfolioData
+    //in portfolio list
+    } else {
+        return portfolioItems
+    }
 } 

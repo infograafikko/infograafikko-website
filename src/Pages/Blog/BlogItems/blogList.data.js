@@ -9,7 +9,7 @@ import { html as satokausikalenteri } from './satokausikalenteri.md'
 const dir = '/img/blog/'
 const imgDir = new URL(dir, import.meta.url).href;
 
-const BLOGARTICLES = 
+const blogArticles = 
         [
             {
                 url: "muutosjohtaminen-tiedon-visualisoinnin-nakokulmasta",
@@ -51,8 +51,33 @@ const BLOGARTICLES =
                 imgDir,
                 coverImg: 'satokausikalenteri-elokuu.png'
             },
-        ]
+    ]
 
-export default function (){
-    return BLOGARTICLES 
+
+function formatMarkdown(markdownAsString, imgDir){
+    //always links to new tab
+    let formattedMarkdown = markdownAsString.split('<a').join('<a target="_blank"');
+    //format blog image dir
+    formattedMarkdown = formattedMarkdown.split('<img src="').join('<img src="' + imgDir);
+    return formattedMarkdown
+}
+
+function resourceData(articleId) {
+    const articleData = blogArticles.filter(d => d.url == articleId)[0]
+    const content = formatMarkdown(articleData.content, articleData.imgDir)
+    return {...articleData, content}
+}
+
+export default function ({params, location, navigate}){
+    const articleId = params.id;
+    
+    //In blog article page
+    if(articleId !== undefined) {
+        const [articleData] = createResource(() => articleId, resourceData)
+        return articleData
+    //in blog list
+    } else {
+        return blogArticles
+    }
+    
 } 

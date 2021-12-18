@@ -12,30 +12,21 @@ import { filterDataBasedOnUrl } from '../../lib/filterDataBasedOnUrl.js'
 import NotFound from '../notFound'
 import Newsletter from '../Home/Newsletter/Newsletter'
 
-function formatMarkdown(markdownAsString, imgDir){
-    //always links to new tab
-    let formattedMarkdown = markdownAsString.split('<a').join('<a target="_blank"');
-    //format blog image dir
-    formattedMarkdown = formattedMarkdown.split('<img src="').join('<img src="' + imgDir);
-    return formattedMarkdown
-}
 
 export default function BlogArticle() {
-    
-    const itemData = useData();    
-    const location = useLocation();
-    const filteredData = createMemo(() => filterDataBasedOnUrl(location.pathname, itemData, "/blogi/"));
 
-    const content = formatMarkdown(filteredData().content, filteredData().imgDir)
+    const itemData = useData();
+
+    const { title, lead, imgDir, coverImg, content } = itemData() 
     
     return(
-            <Show when={typeof filteredData() == 'object'} fallback={<NotFound />}>
+            <Show when={typeof itemData() == 'object'} fallback={<NotFound />}>
                 <Container id="blogArticle">
                     <BlogContent>
                         <HeaderContainer>
-                            <ss.Title>{filteredData().title}</ss.Title>
-                            <ss.Paragraph style={{"font-size": "24px"}}><SolidMarkdown children={filteredData().lead} /></ss.Paragraph>
-                            <CoverImg src={new URL(filteredData().imgDir + filteredData().coverImg, import.meta.url).href} />
+                            <ss.Title>{title}</ss.Title>
+                            <ss.Paragraph style={{"font-size": "24px"}}><SolidMarkdown children={lead} /></ss.Paragraph>
+                            <CoverImg src={new URL(imgDir + coverImg, import.meta.url).href} />
                         </HeaderContainer>
 
                         <ContentContainer innerHTML={content} />

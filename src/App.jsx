@@ -25,7 +25,7 @@ const pages = [
     placement: "menuItem"
   },
   {
-    path: "/blogi/:item",
+    path: "/blogi/:id",
     component: lazy(() => import("./Pages/Blog/BlogArticle")),
     menuText: "",
     data: blogArticlesData, //neat way of getting data to list of urls
@@ -39,7 +39,7 @@ const pages = [
     placement: "menuItem"
   },
   {
-    path: "/portfolio/:item",
+    path: "/portfolio/:id",
     component: lazy(() => import("./Pages/Portfolio/PortfolioPage")),
     menuText: "",
     data: portfolioItemsData, //neat way of getting data to list of urls

@@ -12,27 +12,26 @@ import NotFound from '../notFound'
 
 export default function PortfolioItems() {
     const itemData = useData();
-    const location = useLocation();
-    const filteredData = createMemo(() => filterDataBasedOnUrl(location.pathname, itemData, "/portfolio/"));
-    //const match = useMatch(() => props.href);
+    
+    const { name, description, link, linkText, imgDir, img, pdf } = itemData()
 
     return(
-        <Show when={typeof filteredData() == "object"} fallback={<NotFound />}>
+        <Show when={typeof itemData() == "object"} fallback={<NotFound />}>
             <Container>
                 <ContentContainer>
-                <ss.Title>{filteredData().name}</ss.Title>
-                <ss.Paragraph><SolidMarkdown children={filteredData().description} /></ss.Paragraph>
-                <Show when={filteredData().link}>
-                    <ss.Paragraph>Linkki: <LinkA href={filteredData().link} target="_blank">{filteredData().linkText}</LinkA></ss.Paragraph>
+                <ss.Title>{name}</ss.Title>
+                <ss.Paragraph><SolidMarkdown children={description} /></ss.Paragraph>
+                <Show when={link}>
+                    <ss.Paragraph>Linkki: <LinkA href={link} target="_blank">{linkText}</LinkA></ss.Paragraph>
                 </Show>
-                <Show when={filteredData().img}>
+                <Show when={img}>
                     <InfographicImage 
-                        src={filteredData().imgDir + filteredData().img}
+                        src={imgDir + img}
                     />
                 </Show>
                 <ButtonContainer>
-                <Show when={filteredData().pdf}>
-                    <a href={filteredData().pdf} target="_blank">
+                <Show when={pdf}>
+                    <a href={pdf} target="_blank">
                         <Button 
                             type="primary"
                             text="Avaa PDF uudella välilehdellä"
