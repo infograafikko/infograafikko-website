@@ -20,7 +20,8 @@ function formatMarkdown(markdownAsString, imgDir){
     return formattedMarkdown
 }
 
-export default function PortfolioItems() {
+export default function BlogArticle() {
+    
     const itemData = useData();
 
     
@@ -30,30 +31,32 @@ export default function PortfolioItems() {
     const content = formatMarkdown(filteredData().content, filteredData().imgDir)
     
     return(
-        <Show when={typeof filteredData() == 'object'} fallback={<NotFound />}>
-            <Container id="blogArticle">
-                <BlogContent>
-                    <HeaderContainer>
-                        <ss.Title>{filteredData().title}</ss.Title>
-                        <ss.Paragraph style={{"font-size": "24px"}}><SolidMarkdown children={filteredData().lead} /></ss.Paragraph>
-                        <CoverImg src={new URL(filteredData().imgDir + filteredData().coverImg, import.meta.url).href} />
-                    </HeaderContainer>
+        <Suspense>
+            <Show when={typeof filteredData() == 'object'} fallback={<NotFound />}>
+                <Container id="blogArticle">
+                    <BlogContent>
+                        <HeaderContainer>
+                            <ss.Title>{filteredData().title}</ss.Title>
+                            <ss.Paragraph style={{"font-size": "24px"}}><SolidMarkdown children={filteredData().lead} /></ss.Paragraph>
+                            <CoverImg src={new URL(filteredData().imgDir + filteredData().coverImg, import.meta.url).href} />
+                        </HeaderContainer>
 
-                    <ContentContainer innerHTML={content} />
-                </BlogContent>
-            </Container>
-            <h.AnimatedContainer
-                background1="#fccade"
-                background2="#f7b76d"
-            >
-                <Newsletter 
-                title="Lataa ilmainen infografiikka ja tiedon visualisointi -opas"
-                paragraph="Saat ilmaisen oppaan tiedon esittämiseen, kun tilaat uutiskirjeeni."
-                paragraph2="Opit oppaan avulla kolme avaintaitoa tiedon parempaan esittämiseen. Tilaamalla oppaan saat myös uutiskirjeeni. Uutiskirjeessä annan vinkkejä infografiikan esittämiseen ja tiedon visualisointiin."
-                />
-            </h.AnimatedContainer>
+                        <ContentContainer innerHTML={content} />
+                    </BlogContent>
+                </Container>
+                <h.AnimatedContainer
+                    background1="#fccade"
+                    background2="#f7b76d"
+                >
+                    <Newsletter 
+                    title="Lataa ilmainen infografiikka ja tiedon visualisointi -opas"
+                    paragraph="Saat ilmaisen oppaan tiedon esittämiseen, kun tilaat uutiskirjeeni."
+                    paragraph2="Opit oppaan avulla kolme avaintaitoa tiedon parempaan esittämiseen. Tilaamalla oppaan saat myös uutiskirjeeni. Uutiskirjeessä annan vinkkejä infografiikan esittämiseen ja tiedon visualisointiin."
+                    />
+                </h.AnimatedContainer>
 
-        </Show>
+            </Show>
+        </Suspense>
     )
 
     
