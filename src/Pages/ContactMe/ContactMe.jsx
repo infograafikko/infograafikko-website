@@ -4,7 +4,7 @@ import Button from "../Universal/Button";
 import { submitForm } from "./submitFunctions";
 import * as ss from '../Universal/Universal.styled';
 
-const imgDir = new URL('/img/ota-yhteytta/', import.meta.url).href;
+const imgDir = '/img/ota-yhteytta/'
 
 export default function ContactMe({ }) {
 
