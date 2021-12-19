@@ -5,7 +5,7 @@ import Form from "./Form/FormLambda";
 
 import { sizes } from "../../../lib/screenSizes";
 
-const imgDir = new URL('/img/home/', import.meta.url).href;
+const imgDir = '/img/home/'
 
 
 export default function Newsletter({title,paragraph,paragraph2, target}) {
@@ -33,7 +33,7 @@ export default function Newsletter({title,paragraph,paragraph2, target}) {
                     height="40vh" 
                     heightM="30vh" 
                     heighS="30vh" 
-                    src={imgDir + 'book-mockup.png'} 
+                    src={new URL(imgDir + 'book-mockup.png', import.meta.url).href} 
                     alt={"Kuva Parempia esityksiä -oppaasta"}
                 />
             </LeadImages>

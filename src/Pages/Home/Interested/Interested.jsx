@@ -4,9 +4,7 @@ import Button from "../../Universal/Button";
 
 import { sizes } from "../../../lib/screenSizes";
 
-const imgDir = new URL('/img/home/', import.meta.url).href;
-
-//new URL(imgDir + coverImg, import.meta.url).href
+const imgDir = '/img/home/';
 
 export default function Interested({title,text}) {
     return(
@@ -32,7 +30,7 @@ export default function Interested({title,text}) {
                     </ButtonsContainer>
                 </ContentLeft>
                 <ContentRight
-                    bgImg={imgDir + 'joel-kanerva3.jpg'}
+                    bgImg={new URL(imgDir + 'joel-kanerva3.jpg', import.meta.url).href}
 
                 >   
                     <div style={{

@@ -1,5 +1,5 @@
 
-const imgDir = new URL('/img/home/', import.meta.url).href;
+const imgDir = '/img/home/'
 
 export default [
     /*
@@ -21,7 +21,7 @@ export default [
     */
     
     {
-        component: imgDir + 'faktaa-express-open.png',
+        component: new URL(imgDir + 'faktaa-express-open.png', import.meta.url).href,
         background: undefined,
         type: "Infograafiset taitot",
         alt: "Faktaa Express -lehti avattuna",

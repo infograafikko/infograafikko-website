@@ -1,13 +1,13 @@
 
-const imgDir = new URL('/img/home/', import.meta.url).href;
+const imgDir = '/img/home/';
 
 
 export default [
     {
         name: "professoriliitto",
         component: undefined,
-        background: imgDir + 'phone-with-shadow.svg',
-        embed: imgDir + 'professoriliitto-embed.jpg',
+        background: new URL(imgDir + 'phone-with-shadow.svg', import.meta.url).href,
+        embed: new URL(imgDir + 'professoriliitto-embed.jpg', import.meta.url).href,
         type: "Some-infografiikka",
         alt: "Professoriliiton infografikka Instagramissa",
         altBg: "Puhelin upotettuna taittoon - päällä näkyy instagram-upotus",
@@ -22,9 +22,9 @@ export default [
         zIndex: 2
     },{
         name: "annalect",
-        component: imgDir + 'markkinointimix.png',
-        background: imgDir + 'laptop-with-shadow.svg',
-        embed: imgDir + 'professoriliitto-embed.jpg',
+        component: new URL(imgDir + 'markkinointimix.png', import.meta.url).href,
+        background: new URL(imgDir + 'laptop-with-shadow.svg', import.meta.url).href,
+        embed: new URL(imgDir + 'professoriliitto-embed.jpg', import.meta.url).href,
         type: "Vaikuttavat esitykset",
         alt: "Annalectin Powerpoint-esitys",
         altBg: undefined,

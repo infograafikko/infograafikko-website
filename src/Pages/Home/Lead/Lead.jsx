@@ -3,7 +3,7 @@ import { createSignal } from "solid-js";
 import Button from '../../Universal/Button';
 import {calcScrollPosition} from '../../Universal/scrollFunctions.js';
 
-const imgDir = new URL('/img/home/', import.meta.url).href;
+const imgDir = '/img/home/';
 
 
 const speed = 10;
@@ -50,7 +50,7 @@ export default function Lead({
                     height="60vh" 
                     heightM="50vh" 
                     heighS="50vh" 
-                    src={imgDir + 'lead-laptop.png'} 
+                    src={new URL(imgDir + 'lead-laptop.png', import.meta.url).href} 
                     animate={true}
                     alt={"Infografikka esittää, miten kiviaines kiertää työmaalla"}
 
@@ -64,11 +64,11 @@ export default function Lead({
                     heightS="70vh" 
                 >
                     <s.NonClippedImage 
-                        src={imgDir + 'lead-phone-plain.svg'}
+                        src={new URL(imgDir + 'lead-phone-plain.svg', import.meta.url).href}
                         alt={"Puhelin upotettuna taittoon - päällä näkyy infografiikkaa"}
                     />
                     <s.ClippedImage 
-                        src={imgDir + 'lead-phone-infographic.svg'}
+                        src={new URL(imgDir + 'lead-phone-infographic.svg', import.meta.url).href}
                         inset={defineInset(scrollPos(), 2.5)}
                         insetMobile={defineInset(scrollPos(), 5)}
                         insetRound={"3vh"}
