@@ -119,7 +119,7 @@ async function runAllFunctions(){
     
     let modified = website
       .split("http://localhost:3000")
-      .join("https://www.infograafikko.fi");
+      .join("https://d3s2f6xcyktvxt.cloudfront.net");
     //console.log(modified)
 
     fse.outputFile('./html/' + page.url + "index.html", modified);

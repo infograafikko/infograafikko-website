@@ -26,7 +26,7 @@ export default function PortfolioItems() {
                 </Show>
                 <Show when={img}>
                     <InfographicImage 
-                        src={imgDir + img}
+                        src={new URL(imgDir + img, import.meta.url).href}
                     />
                 </Show>
                 <ButtonContainer>
