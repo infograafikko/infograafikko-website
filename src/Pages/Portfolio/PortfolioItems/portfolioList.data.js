@@ -1,6 +1,5 @@
 import { createResource } from "solid-js";
 
-
 const imgDir = '/img/portfolio/'
 
 const portfolioItems = [

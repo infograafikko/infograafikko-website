@@ -22,6 +22,11 @@ exports.listOfPages = [
       metaDesc: "Vinkit parempaan infografiikkaan Infograafikon blogista."
     },
     {
+      url: "error/",
+      type: "website",
+      headImg: "https://www.infograafikko.fi/img/home/joel-kanerva3.jpg"
+    },
+    {
       url: "portfolio/annalect-neural-network/",
       type: "article",
       date: false
@@ -68,22 +73,27 @@ exports.listOfPages = [
     },
     {
       url: "blogi/muutosjohtaminen-tiedon-visualisoinnin-nakokulmasta/",
-      type: "article"
+      type: "article",
+      date: true
     },
     {
       url: "blogi/nuorisobarometri-vaikuttavuus/",
-      type: "article"
+      type: "article",
+      date: true
     },
     {
       url: "blogi/paremmat-graafit-esityksiin/",
-      type: "article"
+      type: "article",
+      date: true
     },
     {
       url: "blogi/tiedon-visualisointi-parhaat-kaytannot/",
-      type: "article"
+      type: "article",
+      date: true
     },
     {
       url: "blogi/satokausikalenteri-kotimaiset-tuotteet/",
-      type: "article"
+      type: "article",
+      date: true
     },
   ]

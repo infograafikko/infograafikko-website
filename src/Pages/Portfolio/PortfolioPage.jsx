@@ -46,7 +46,7 @@ export default function PortfolioItems() {
                 </Link>
                 </ButtonContainer>
                 </ContentContainer>
-                <img id="headImg" style={{"display": "none"}} src={bgImg} />
+                <img id="headImg" style={{"display": "none"}} src={new URL(imgDir + bgImg, import.meta.url).href} />
             </Container>
             
         </Show>
