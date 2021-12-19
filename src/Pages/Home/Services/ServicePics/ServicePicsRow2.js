@@ -1,5 +1,5 @@
-import Chart from './chartPlaceholder.svg';
-import Magazine from './faktaa-express-open.png';
+
+const imgDir = new URL('/img/home/', import.meta.url).href;
 
 export default [
     /*
@@ -21,7 +21,7 @@ export default [
     */
     
     {
-        component: Magazine,
+        component: imgDir + 'faktaa-express-open.png',
         background: undefined,
         type: "Infograafiset taitot",
         alt: "Faktaa Express -lehti avattuna",

@@ -24,9 +24,9 @@ export default function BlogArticle() {
                 <Container id="blogArticle">
                     <BlogContent>
                         <HeaderContainer>
-                            <ss.Title>{title}</ss.Title>
-                            <ss.Paragraph style={{"font-size": "24px"}}><SolidMarkdown children={lead} /></ss.Paragraph>
-                            <CoverImg src={new URL(imgDir + coverImg, import.meta.url).href} />
+                            <ss.Title id="title" as="h1">{title}</ss.Title>
+                            <ss.Paragraph id="lead" style={{"font-size": "24px"}}><SolidMarkdown children={lead} /></ss.Paragraph>
+                            <CoverImg id="headImg" src={new URL(imgDir + coverImg, import.meta.url).href} />
                         </HeaderContainer>
 
                         <ContentContainer innerHTML={content} />
@@ -110,7 +110,7 @@ const HeaderContainer = styled("div")(
  `
 );
 
-const Container = styled("div")(
+const Container = styled("article")(
     props => `
     padding: 16px 16px;
     background-color: #F1F2F4;

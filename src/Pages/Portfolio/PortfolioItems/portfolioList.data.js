@@ -62,7 +62,7 @@ const portfolioItems = [
     },
     {
         url: "fish-sludge",
-        name: "Selittävä infografiikko",
+        name: "Näin lietettä hyödynnetään kiertotaloudessa",
         description: "Infografiikka näyttää, kuinka lietettä pystytään käyttämään kiertävänä resurssina.",
         imgDir,
         bgImg: 'ouluSQ.png',

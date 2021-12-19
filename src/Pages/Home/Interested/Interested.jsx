@@ -3,7 +3,10 @@ import * as ss from '../../Universal/Universal.styled';
 import Button from "../../Universal/Button";
 
 import { sizes } from "../../../lib/screenSizes";
-import MeImage from './img/joel-kanerva3.jpg'
+
+const imgDir = new URL('/img/home/', import.meta.url).href;
+
+//new URL(imgDir + coverImg, import.meta.url).href
 
 export default function Interested({title,text}) {
     return(
@@ -29,12 +32,12 @@ export default function Interested({title,text}) {
                     </ButtonsContainer>
                 </ContentLeft>
                 <ContentRight
-                    bgImg={MeImage}
+                    bgImg={imgDir + 'joel-kanerva3.jpg'}
 
                 >   
                     <div style={{
                         /* BgImg component has a bug which reloads constantly bgimage */
-                        "background-image": `url(${MeImage})`,
+                        "background-image": `url(${new URL(imgDir + 'joel-kanerva3.jpg', import.meta.url).href})`,
                         "background-size": "cover",
                         "background-position": "center",
                         "width": "100%",

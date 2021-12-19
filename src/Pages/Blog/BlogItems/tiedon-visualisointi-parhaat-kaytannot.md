@@ -135,4 +135,4 @@ Tiedon visualisointi on uskomattoman rikas kieli. Sen avulla voi ilmaista sellai
 
 Tämä blogikirjoitus on suomenkielinen referaatti / kokooma Harvard Business Review’ssä julkaistusta erinomaisesta artikkelista [Visualizations That Really Work](https://hbr.org/2016/06/visualizations-that-really-work). Mikäli kiinnostuit aiheesta alkuperäisen artikkelin kirjoittajan kirja [Good Charts: The HBR Guide to Making Smarter, More Persuasive Data Visualizations](https://www.amazon.com/Good-Charts-Smarter-Persuasive-Visualizations/dp/1633690709) on tutustumisen arvoinen.
 
-\- Joel Kanerva, 11.09.2016
+\- Joel Kanerva, <span id="finnishDate">11.09.2016</span>

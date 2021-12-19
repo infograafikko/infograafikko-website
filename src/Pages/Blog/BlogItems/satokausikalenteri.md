@@ -14,4 +14,4 @@ Lataa PDF:<br/>
 [Satokausikalenteri – kuukausikalenteri](https://infograafikko-website.s3.eu-north-1.amazonaws.com/pdf/kuukausikalenterit1.pdf)<br/>
 [Satokausikalenteri – vuosikolmannes](https://infograafikko-website.s3.eu-north-1.amazonaws.com/pdf/vuosikolmanneskalenteri.pdf)
 
-\- Joel Kanerva, 04.06.2015
+\- Joel Kanerva, <span id="finnishDate">04.06.2015</span>

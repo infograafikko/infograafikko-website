@@ -50,4 +50,4 @@ Tuure suosittelee myös muille infografiikkaa omien viestien viejäksi.
 
 – Suosittelen ehdottomasti kokeilemaan, jos tarvitsee saada asia esitettyä tiiviisti ja havainnollistavasti. Tietotulva on niin valtavaa, joten on pystyttävä erottumaan. Vanha sanonta _”Kuva kertoo enemmän kuin tuhat sanaa”_ pitää tässä hyvin paikkansa, Tuure päättää.
 
-\- Joel Kanerva, 10.04.2017
+\- Joel Kanerva, <span id="finnishDate">10.04.2017</span>

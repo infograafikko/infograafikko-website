@@ -25,6 +25,7 @@ export default defineConfig({
   build: {
     target: "esnext",
     polyfillDynamicImport: false,
+    publicDir: 'img',
     outDir: 'dist'
   },
 });

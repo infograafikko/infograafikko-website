@@ -46,3 +46,5 @@ Kuten varmasti huomasit, kahden viimeisen graafin fokuksessa oli esittää, mite
 Miten valita oikea graafi visualisoimaan data? Se riippuu siitä, mitä asiaa datassa haluat korostaa. Yllä olevissa graafeissa on tismalleen sama data, mutta ne näyttävät todella erilaiselta. Kannattaa käyttää aikaa graafien tutkimiseen ja ymmärtää, mitä puolia datasta ne näyttävät hyvin ja mitä huonosti.
 
 Tiedon visualisoinnissa ei ole mitään yhtä oikeaa ratkaisua, joka toimisi aina. Graafin valinta riippuu aina siitä, mitä haluat tutkia tai mikä on keskeisin viesti. Me ihmiset olemme erittäin hyviä havainnoimaan _visuaalisia_ trendejä. Tästä syystä datavisualisointia parempaa välinettä kehityssuuntien havaitsemiseen ei ole.
+
+\- Joel Kanerva, <span id="finnishDate">15.11.2016</span>

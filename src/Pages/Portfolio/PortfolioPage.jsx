@@ -13,14 +13,14 @@ import NotFound from '../notFound'
 export default function PortfolioItems() {
     const itemData = useData();
     
-    const { name, description, link, linkText, imgDir, img, pdf } = itemData()
+    const { name, description, link, linkText, imgDir, img, pdf, bgImg} = itemData()
 
     return(
         <Show when={typeof itemData() == "object"} fallback={<NotFound />}>
-            <Container>
+            <Container as="article">
                 <ContentContainer>
-                <ss.Title>{name}</ss.Title>
-                <ss.Paragraph><SolidMarkdown children={description} /></ss.Paragraph>
+                <ss.Title id="title">{name}</ss.Title>
+                <ss.Paragraph id="lead"><SolidMarkdown children={description} /></ss.Paragraph>
                 <Show when={link}>
                     <ss.Paragraph>Linkki: <LinkA href={link} target="_blank">{linkText}</LinkA></ss.Paragraph>
                 </Show>
@@ -46,6 +46,7 @@ export default function PortfolioItems() {
                 </Link>
                 </ButtonContainer>
                 </ContentContainer>
+                <img id="headImg" style={{"display": "none"}} src={bgImg} />
             </Container>
             
         </Show>

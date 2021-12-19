@@ -6,7 +6,7 @@ Haasteista datan kommunikoinnissa kertoo LinkedInin listaus, jossa kyky kommunik
 
 Googlen pääekonomisti tohtori Hal R. Varian on todennut, että _“Kyky ymmärtää dataa, jalostaa sitä, saada siitä oivalluksia, visualisoida sitä ja kyky kommunikoida sen avulla ovat taitoja, jotka ovat äärimmäisen tärkeitä tulevina vuosikymmeninä.”_
 
-### Datatarina saa aikaan toimintaa
+## Datatarina saa aikaan toimintaa
 Kun 500 parhaiten menestynyttä TED Talkia tutkittiin saatiin selville, että [vähintään 65% niiden sisällöstä koostui tarinankerronnasta](https://www.forbes.com/sites/carminegallo/2014/02/28/how-sheryl-sandbergs-last-minute-addition-to-her-ted-talk-sparked-a-movement/?sh=10a2665865c2).
 
 Tarina saa aikaan muutoksia.
@@ -21,7 +21,7 @@ Kerro datasta kiinnostavasti ja selkeästi. Näin saat viestisi paremmin perille
 Show, don't tell. _Näytä_, mitä datassa tapahtuu ja onnistut vakuuttamaan yleisösi vieläkin paremmin.
 #### Kiinnostavuus
 Yhdistä visuaalisuus ja hyvä tarinankerronta. Näin vangitset yleisösi kiinnostuksen.
-### Tiedolla johdettu yritys on tulevaisuuden menestyjä
+## Tiedolla johdettu yritys on tulevaisuuden menestyjä
 ![Kun data, narritiivi ja visuaalisuus yhdistyvät saadaan aikaan muutos](venndiagram-infog-full.png)
 [Forresterin kyselyssä](https://go.forrester.com/blogs/16-03-09-think_you_want_to_be_data_driven_insight_is_the_new_data/) 74% yrityksestä haluaa olla datalla ja tiedolla johdettuja, mutta vain 29% sanoo analytiikan tulosten johtavan toimintaan. Väli näiden kahden luvun välillä on valtaisa. Tämä kertoo siitä, että suurimmalla osalla yrityksistä on vaikeuksia muuntaa data liiketoimintaa edistäviksi toimenpiteiksi.
 
@@ -48,4 +48,4 @@ Kun esitys ja sisältö ovat _selkeitä_ ja hyvin valmisteltuja, ne aikaansaavat
 
 Voidaan siis hyvällä syyllä sanoa, että datan esittäminen on avainasemassa johtopäätösten jalkauttamisessa toimintaan. Vahvistamalla osaamista datavisualisoinnissa ja esitystaidoissa varmistat sen, ettei analytiikkatyöhön laitetut eurot valu hukkaan.
 
-\- Joel Kanerva, 12.12.2021
+\- Joel Kanerva, <span id="finnishDate">12.12.2021</span>

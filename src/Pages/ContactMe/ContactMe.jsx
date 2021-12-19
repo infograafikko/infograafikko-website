@@ -4,7 +4,7 @@ import Button from "../Universal/Button";
 import { submitForm } from "./submitFunctions";
 import * as ss from '../Universal/Universal.styled';
 
-import InfographicTypes from './infografiikkatyypit-infograafikkofi.png'
+const imgDir = new URL('/img/ota-yhteytta/', import.meta.url).href;
 
 export default function ContactMe({ }) {
 
@@ -18,9 +18,9 @@ export default function ContactMe({ }) {
         <Container>
             <ContentContainer>
                 <ParagraphContainer>
-                    <ss.Title>Ota yhteyttä</ss.Title>
+                    <ss.Title id="title">Ota yhteyttä</ss.Title>
                     <ss.Paragraph>Autan yrityksiä ja yhteisöjä infografiikassa, tiedonvisualisoinnissa ja tiedon interaktiivisessa esittämisessä.</ss.Paragraph>
-                    <ss.Paragraph>Ota yhteyttä oheisella lomakkeella, ja kerro visualisointitarpeestasi. Olen yhteydessä mahdollisimman pian.</ss.Paragraph>
+                    <ss.Paragraph id="lead">Ota yhteyttä oheisella lomakkeella, ja kerro visualisointitarpeestasi. Olen yhteydessä mahdollisimman pian.</ss.Paragraph>
                     <ss.Paragraph>Voit lähettää sähköpostin liitteineen myös suoraan osoitteeseen <a href="mailto:joel@infograafikko.fi">joel@infograafikko.fi</a>.</ss.Paragraph>
                 </ParagraphContainer>
                 <Form onSubmit={(e) => submitForm(emailLabel, emailInput, textInput, question, e)}>
@@ -42,7 +42,7 @@ export default function ContactMe({ }) {
                     />
                 </Form>
             </ContentContainer>
-            <Img src={InfographicTypes} />
+            <Img src={imgDir + 'infografiikkatyypit-infograafikkofi.png'} />
         </Container>
     )
 }

@@ -1,12 +1,10 @@
 import * as s from './Lead.styled';
 import { createSignal } from "solid-js";
-
 import Button from '../../Universal/Button';
-import leadLaptop from "./img/lead-laptop.png"
-import infographic from "./img/lead-phone-infographic.svg"
-import phoneDevice from "./img/lead-phone-plain.svg"
-
 import {calcScrollPosition} from '../../Universal/scrollFunctions.js';
+
+const imgDir = new URL('/img/home/', import.meta.url).href;
+
 
 const speed = 10;
 
@@ -38,8 +36,8 @@ export default function Lead({
 
         <s.LeadContent ref={ref}>
             <s.LeadTexts>
-                <s.Title>{title}</s.Title>
-                <s.Text>{text}</s.Text> 
+                <s.Title id="title">{title}</s.Title>
+                <s.Text id="lead">{text}</s.Text> 
                     <Button buttonType="primary" buttonPath={buttonPath} text={buttonText} />
             </s.LeadTexts>
             <s.LeadImages height="70vh">
@@ -52,7 +50,7 @@ export default function Lead({
                     height="60vh" 
                     heightM="50vh" 
                     heighS="50vh" 
-                    src={leadLaptop} 
+                    src={imgDir + 'lead-laptop.png'} 
                     animate={true}
                     alt={"Infografikka esittää, miten kiviaines kiertää työmaalla"}
 
@@ -66,11 +64,11 @@ export default function Lead({
                     heightS="70vh" 
                 >
                     <s.NonClippedImage 
-                        src={phoneDevice}
+                        src={imgDir + 'lead-phone-plain.svg'}
                         alt={"Puhelin upotettuna taittoon - päällä näkyy infografiikkaa"}
                     />
                     <s.ClippedImage 
-                        src={infographic}
+                        src={imgDir + 'lead-phone-infographic.svg'}
                         inset={defineInset(scrollPos(), 2.5)}
                         insetMobile={defineInset(scrollPos(), 5)}
                         insetRound={"3vh"}

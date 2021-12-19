@@ -32,7 +32,7 @@ export default function Blog(){
         <Container>
             <Show when={blogList.length > 0}>
                 <ContentContainer>
-                    <ss.Title>Blogi</ss.Title>
+                    <ss.Title id="title">Blogi</ss.Title>
                     <RenderBlogItems
                         blogItems={blogList}
                     />

@@ -1,17 +1,13 @@
-import Insta from './instaphone.png';
-import PhoneTemplate from './phone-with-shadow.svg';
-import LaptopTemplate from './laptop-with-shadow.svg';
 
-import PowerPoint from './markkinointimix.png';
-import ProfessoriliittoEmbed from './professoriliitto-embed.jpg';
+const imgDir = new URL('/img/home/', import.meta.url).href;
 
 
 export default [
     {
         name: "professoriliitto",
         component: undefined,
-        background: PhoneTemplate,
-        embed: ProfessoriliittoEmbed,
+        background: imgDir + 'phone-with-shadow.svg',
+        embed: imgDir + 'professoriliitto-embed.jpg',
         type: "Some-infografiikka",
         alt: "Professoriliiton infografikka Instagramissa",
         altBg: "Puhelin upotettuna taittoon - päällä näkyy instagram-upotus",
@@ -26,9 +22,9 @@ export default [
         zIndex: 2
     },{
         name: "annalect",
-        component: PowerPoint,
-        background: LaptopTemplate,
-        embed: ProfessoriliittoEmbed,
+        component: imgDir + 'markkinointimix.png',
+        background: imgDir + 'laptop-with-shadow.svg',
+        embed: imgDir + 'professoriliitto-embed.jpg',
         type: "Vaikuttavat esitykset",
         alt: "Annalectin Powerpoint-esitys",
         altBg: undefined,

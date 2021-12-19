@@ -29,7 +29,9 @@ export default function Portfolio() {
     return(
         <Container>
             <Show when={portfolioList.length > 0}>
-                <ss.Title style={{"text-align": "center"}}>Portfolio</ss.Title>
+                <TitleContainer>
+                    <ss.Title id="title">Portfolio</ss.Title>
+                </TitleContainer>
                 <RenderWorkContainer 
                     works={portfolioList}
                 />
@@ -52,6 +54,18 @@ const Container = styled("div")(
 const ImgContainer = styled("div")(
     props => `
 
+  `
+);
+
+const TitleContainer = styled("div")(
+    props => `
+    margin: auto;
+    max-width: 960px;
+
+    @media only screen and (max-width: 980px) {
+        max-width: 660px;
+        padding-left: 15px;
+    }
   `
 );
 
@@ -79,6 +93,7 @@ const BGImg = styled("div")(
     margin: 8px 0;
     width: 300px;
     height: 300px;
+    background-color: #F1F2F4;
     background-image: url(${props.bgImg});
     background-size: cover;
     background-position: top center;
