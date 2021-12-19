@@ -42,7 +42,7 @@ export default function ContactMe({ }) {
                     />
                 </Form>
             </ContentContainer>
-            <Img src={imgDir + 'infografiikkatyypit-infograafikkofi.png'} />
+            <Img src={new URL(imgDir + 'infografiikkatyypit-infograafikkofi.png', import.meta.url).href;} />
         </Container>
     )
 }
