@@ -56,7 +56,7 @@ const blogArticles =
 
 function formatMarkdown(markdownAsString, imgDir){
     //always links to new tab
-    let formattedMarkdown = markdownAsString.split('<a').join('<a target="_blank"');
+    let formattedMarkdown = markdownAsString.split('<a').join('<a rel="noreferrer" target="_blank"');
     //format blog image dir
     formattedMarkdown = formattedMarkdown.split('<img src="').join('<img src="' + imgDir);
     return formattedMarkdown

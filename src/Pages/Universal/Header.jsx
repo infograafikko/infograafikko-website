@@ -53,6 +53,7 @@ export default function Header({
                     margin="6px"
                     linkToMainPage={true}
                     >
+                        <span style={{"display": "none"}}>Logoa painamalla pääset etusivulle</span>
                     <Logo
                         color="#f7931e"
                         color2="#fff"

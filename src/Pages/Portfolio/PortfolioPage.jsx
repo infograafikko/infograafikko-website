@@ -22,7 +22,7 @@ export default function PortfolioItems() {
                 <ss.Title id="title">{name}</ss.Title>
                 <ss.Paragraph id="lead"><SolidMarkdown children={description} /></ss.Paragraph>
                 <Show when={link}>
-                    <ss.Paragraph>Linkki: <LinkA href={link} target="_blank">{linkText}</LinkA></ss.Paragraph>
+                    <ss.Paragraph>Linkki: <LinkA href={link} rel="noreferrer" target="_blank">{linkText}</LinkA></ss.Paragraph>
                 </Show>
                 <Show when={img}>
                     <InfographicImage 

@@ -40,7 +40,7 @@ export default function Button ({
 
     return(
         buttonPath.length > 1 ?
-        <LinkStyled href={buttonPath} target={target}>
+        <LinkStyled rel={target == "_blank" ? "noreferrer" : ""} href={buttonPath} target={target}>
             <ButtonContainer
                 {...buttonStyles}
             >

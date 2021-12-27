@@ -14,6 +14,7 @@ function RenderLogos({logos, maxHeight, maxHeightM, margin, marginM}) {
           maxHeightM={maxHeightM}  
           margin={margin}
           marginM={marginM}
+          alt={logo.alt}
         />
       )
     }}

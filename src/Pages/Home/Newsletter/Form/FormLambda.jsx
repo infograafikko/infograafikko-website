@@ -47,7 +47,7 @@ const Form = styled("form")(
     `
 );
 
-const FormContainer = styled("div")(
+const FormContainer = styled("label")(
     props => `
     display: flex;
     flex-direction: column;
